@@ -39,6 +39,9 @@ mongoose.connect(URL, {
   const supervisorRouter = require("./Routes/supervisorDetail");
   app.use("/supervisor", supervisorRouter);
 
+  const researchTopicRouter = require("./Routes/researchTopic");
+  app.use("/researchTopic", researchTopicRouter);
+
 
 
   

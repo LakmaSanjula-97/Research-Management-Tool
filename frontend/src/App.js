@@ -27,6 +27,9 @@ import AuthContext from './Components/context/AuthContext';
 import AddSupervisor from './Components/SupervisorDetails/AddSupervisor';
 import allSupervisor from './Components/SupervisorDetails/AllSupervisor';
 import EditSupervisor from './Components/SupervisorDetails/EditSupervisor';
+import AddResearchTopic from './Components/ResearchTopics/AddResearchTopic';
+import allresearchTopic from './Components/ResearchTopics/AllResearchTopic';
+import EditresearchTopic from './Components/ResearchTopics/EditResearchtopic';
 
 
 axios.defaults.withCredentials = true;
@@ -60,6 +63,12 @@ function App() {
           <Route path="/dashboard/AllSupervisor" exact component={allSupervisor} />
           <Route path="/dashboard/EditSupervisor/:id" exact component={EditSupervisor} />
 
+
+          {/*---------------- research topics -----------------*/}
+
+          <Route path="/dashboard/AddResearchTopic" exact component={AddResearchTopic} />
+          <Route path="/dashboard/AllResearchTopic" exact component={allresearchTopic} />
+          <Route path="/dashboard/EditResearchTopic/:id" exact component={EditresearchTopic} />
 
 
           <Route exact path="/register"><Register /></Route>

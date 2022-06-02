@@ -56,11 +56,11 @@ function sidebar() {
 
 
                 <li data-toggle="collapse" data-target="#routes" className="collapsed">
-                  <a href="#"><i class="fas fa-route"></i>&nbsp;&nbsp;&nbsp; Routes <span className="arrow"></span></a>
+                  <a href="#"><i class="fas fa-route"></i>&nbsp;&nbsp;&nbsp; Research Topic <span className="arrow"></span></a>
                 </li>  
                 <ul className="sub-menu collapse" id="routes">
-                  <li><a href="/dashboard/addBusroute">Add Routes</a></li>
-                  <li><a href="/dashboard/viewBusroute">All Routes</a></li>
+                  <li><a href="/dashboard/AddResearchTopic">Add Research  Topic</a></li>
+                  <li><a href="/dashboard/AllResearchTopic">All Research Topic</a></li>
                 </ul>
 
 

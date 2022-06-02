@@ -50,7 +50,7 @@ export default function AddSupervisor() {
             <br></br>
             <br></br>
             <h2 id="headertext">
-                Add Journey
+                Add Supervisor
             </h2>
 
             {/* add journey form */}

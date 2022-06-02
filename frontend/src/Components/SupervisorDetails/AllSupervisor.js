@@ -95,9 +95,7 @@ export default class allSupervisor extends Component {
 
                                     <span id="text1">Supervisor</span>
 
-                                    <div>
-                                        lheuh
-                                    </div>                         
+                                                             
 
                                 </span>
                             </tr>

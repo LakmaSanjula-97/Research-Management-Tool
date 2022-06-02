@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 
-export default class allSupervisor extends Component {
+export default class ViewSupervisorApproval extends Component {
 
     constructor(props){
         super(props);
@@ -13,7 +13,7 @@ export default class allSupervisor extends Component {
 
     //auto refreh the code
     componentDidMount(){
-        axios.get('http://localhost:8070/supervisor/').then(response=>{
+        axios.get('http://localhost:8070/requestSupervisor/').then(response=>{
             this.setState({supervisors: response.data})
         }).catch(function (error){
             console.log(error);
@@ -22,7 +22,7 @@ export default class allSupervisor extends Component {
 
     // update code
     componentDidUpdate(){
-        axios.get('http://localhost:8070/supervisor/').then(response =>{
+        axios.get('http://localhost:8070/requestSupervisor/').then(response =>{
             this.setState({supervisors:response.data})
         }).catch(function (error){
             console.log(error);
@@ -31,7 +31,7 @@ export default class allSupervisor extends Component {
 
     // delete 
     deleteSupervisor=(id)=>{
-        axios.delete(`http://localhost:8070/supervisor/delete/${id}`).then((res) =>{
+        axios.delete(`http://localhost:8070/requestSupervisor/delete/${id}`).then((res) =>{
             
                 //alert("Delete Successfully");
 
@@ -43,7 +43,7 @@ export default class allSupervisor extends Component {
 
 
     addJourney(){
-        this.props.history.push('/dashboard/addJourney');
+        this.props.history.push('/admin/SupervisorView');
     }
 
     searchSupervisorName(event){
@@ -68,7 +68,7 @@ export default class allSupervisor extends Component {
             <div>
 
                 <div id="topic">
-                    <h2>Dashboard - View Request Supervisor</h2>
+                    <h2>Dashboard - Supervisor Approval</h2>
                     <hr id="hr"></hr>
                 </div>
 
@@ -79,12 +79,7 @@ export default class allSupervisor extends Component {
             
                 </div>
 
-                <div>
-                    <a className="btn btn-warning" id="btn3" href="/dashboard/addJourney">
-                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Add Supervisor
-                    </a>
-                </div>
-
+               
                 <div id="table1">
 
                     <table id="journey_table" style={{textAlign:'center'}}>
@@ -93,18 +88,23 @@ export default class allSupervisor extends Component {
                             <tr style={{'textAlign':'left'}}>
                                 <span >
 
-                                    <span id="text1">Supervisor</span>
-                
+                                    <span id="text1">Approval</span>
+
+                                                          
 
                                 </span>
                             </tr>
 
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Name</th>
-                                <th style={{'textAlign':'center'}}>Email</th>
-                                <th style={{'textAlign':'center'}}>Department</th>
+                                <th style={{'textAlign':'center'}}>Research Topic</th>
                                 <th style={{'textAlign':'center'}}>Research Area</th>
+                                <th style={{'textAlign':'center'}}>Supervisor Name</th>
+                                <th style={{'textAlign':'center'}}>Group Leader</th>
+                                <th style={{'textAlign':'center'}}>Leader ITnumber</th>
+                                <th style={{'textAlign':'center'}}>Request Message</th>
+                                <th style={{'textAlign':'center'}}>Date</th>
+                                <th style={{'textAlign':'center'}}>Approval</th>
                                 
                             </tr>
 
@@ -115,14 +115,18 @@ export default class allSupervisor extends Component {
                             {filtersupervisor_name.map((p, index)=>{
                                 return <tr key={index}>
                                      
+                                    <td>{p.researchTopic}</td>
+                                    <td>{p.research_area}</td>
                                     <td>{p.supervisor_name}</td>
-                                    <td>{p.supervisor_email}</td>
-                                    <td>{p.supervisor_faculty}</td>
-                                    <td>{p.supervisor_research_area}</td>
+                                    <td>{p.GroupLeader}</td>
+                                    <td>{p.GroupLeaderITnumber}</td>
+                                    <td>{p.Requestmessage}</td>
+                                    <td>{p.sdate}</td>
+                                    <td>{p.approval}</td>
                                     
 
                                     <td>
-                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/EditSupervisor/${p._id}`}>
+                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/EditRequestSupervisor/${p._id}`}>
                                             <i class="fas fa-edit "></i>&nbsp;&nbsp;Edit
                                         </a>
                                       

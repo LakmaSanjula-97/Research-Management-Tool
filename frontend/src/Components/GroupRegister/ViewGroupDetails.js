@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import '../../Styles/managebusroute.css';
 
 
-
-export default class allSupervisor extends Component {
+export default class ViewGroupDetails extends Component {
 
     constructor(props){
         super(props);
-        this.state = {supervisors: [], searchId:''};
+        this.state = {groupdetail: [], searchId:''};
  
     }
 
     //auto refreh the code
     componentDidMount(){
-        axios.get('http://localhost:8070/supervisor/').then(response=>{
-            this.setState({supervisors: response.data})
+        axios.get('http://localhost:8070/groupdetail/').then(response=>{
+            this.setState({groupdetail: response.data})
         }).catch(function (error){
             console.log(error);
         })
@@ -22,8 +22,8 @@ export default class allSupervisor extends Component {
 
     // update code
     componentDidUpdate(){
-        axios.get('http://localhost:8070/supervisor/').then(response =>{
-            this.setState({supervisors:response.data})
+        axios.get('http://localhost:8070/groupdetail/').then(response =>{
+            this.setState({groupdetail:response.data})
         }).catch(function (error){
             console.log(error);
         })
@@ -31,7 +31,7 @@ export default class allSupervisor extends Component {
 
     // delete 
     deleteSupervisor=(id)=>{
-        axios.delete(`http://localhost:8070/supervisor/delete/${id}`).then((res) =>{
+        axios.delete(`http://localhost:8070/groupdetail/delete/${id}`).then((res) =>{
             
                 //alert("Delete Successfully");
 
@@ -43,7 +43,7 @@ export default class allSupervisor extends Component {
 
 
     addJourney(){
-        this.props.history.push('/dashboard/addJourney');
+        this.props.history.push('/admin/SupervisorView');
     }
 
     searchSupervisorName(event){
@@ -56,9 +56,9 @@ export default class allSupervisor extends Component {
 
     render(){
         
-        let filtersupervisor_name = this.state.supervisors.filter((
+        let filtermember1Name = this.state.groupdetail.filter((
             p)=>{
-                return p.supervisor_name.indexOf(this.state.
+                return p.member1Name.indexOf(this.state.
                     searchId)!==-1;
             }
         );
@@ -68,7 +68,7 @@ export default class allSupervisor extends Component {
             <div>
 
                 <div id="topic">
-                    <h2>Dashboard - View Request Supervisor</h2>
+                    <h2>Dashboard - Manage Group Details</h2>
                     <hr id="hr"></hr>
                 </div>
 
@@ -79,13 +79,9 @@ export default class allSupervisor extends Component {
             
                 </div>
 
-                <div>
-                    <a className="btn btn-warning" id="btn3" href="/dashboard/addJourney">
-                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Add Supervisor
-                    </a>
-                </div>
+                
 
-                <div id="table1">
+                <div id="table1" >
 
                     <table id="journey_table" style={{textAlign:'center'}}>
                         <thead>
@@ -93,18 +89,24 @@ export default class allSupervisor extends Component {
                             <tr style={{'textAlign':'left'}}>
                                 <span >
 
-                                    <span id="text1">Supervisor</span>
-                
+                                    <span id="text1">GroupDetails</span>
+
+                                                          
 
                                 </span>
                             </tr>
 
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Name</th>
-                                <th style={{'textAlign':'center'}}>Email</th>
-                                <th style={{'textAlign':'center'}}>Department</th>
-                                <th style={{'textAlign':'center'}}>Research Area</th>
+                                <th style={{'textAlign':'center'}}>Leader Name</th>
+                                <th style={{'textAlign':'center'}}>Leader IT No</th>
+                                <th style={{'textAlign':'center'}}>Member2 Name</th>
+                                <th style={{'textAlign':'center'}}>Member2 IT No</th>
+                                <th style={{'textAlign':'center'}}>Member3 Name</th>
+                                <th style={{'textAlign':'center'}}>Member3 IT No</th>
+                                <th style={{'textAlign':'center'}}>Member4 Name</th>
+                                <th style={{'textAlign':'center'}}>Member4 IT No</th>
+                                <th style={{'textAlign':'center'}}>Group ID</th>
                                 
                             </tr>
 
@@ -112,19 +114,21 @@ export default class allSupervisor extends Component {
                         
                         <tbody>
 
-                            {filtersupervisor_name.map((p, index)=>{
+                            {filtermember1Name.map((p, index)=>{
                                 return <tr key={index}>
                                      
-                                    <td>{p.supervisor_name}</td>
-                                    <td>{p.supervisor_email}</td>
-                                    <td>{p.supervisor_faculty}</td>
-                                    <td>{p.supervisor_research_area}</td>
-                                    
+                                    <td>{p.member1Name}</td>
+                                    <td>{p.member1ITnumber}</td>
+                                    <td>{p.member2Name}</td>
+                                    <td>{p.member2ITnumber}</td>
+                                    <td>{p.member3Name}</td>
+                                    <td>{p.member3ITnumber}</td>
+                                    <td>{p.member4Name}</td>
+                                    <td>{p.member4ITnumber}</td>
+                                    <td>{p.GroupID}</td>
 
                                     <td>
-                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/EditSupervisor/${p._id}`}>
-                                            <i class="fas fa-edit "></i>&nbsp;&nbsp;Edit
-                                        </a>
+                                        
                                       
                                     
                                         <a className="btn btn-danger" id="btn2" onClick={() => this.deleteSupervisor(p._id)}>

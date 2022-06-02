@@ -29,6 +29,17 @@ import allSupervisor from './Components/SupervisorDetails/AllSupervisor';
 import EditSupervisor from './Components/SupervisorDetails/EditSupervisor';
 
 
+import ViewSupervisorApproval from './Components/Admin/SupervisorApproval/SupervisorView';
+import EditRequestSupervisor from './Components/Admin/SupervisorApproval/UpdateSupervisorApproval';
+import AddSupervisorRequest from './Components/RequestSupervisor/AddSupervisorRequest';
+import ViewSupervisorRequest from './Components/RequestSupervisor/ViewSupervisorRequest';
+
+
+import AddGroups from './Components/GroupRegister/AddGroups';
+import ViewGroupDetails from './Components/GroupRegister/ViewGroupDetails';
+import AdminViewGroupDetails from './Components/Admin/GroupId/AdminViewGroupDetails';
+
+
 axios.defaults.withCredentials = true;
 
 function App() {
@@ -60,6 +71,18 @@ function App() {
           <Route path="/dashboard/AllSupervisor" exact component={allSupervisor} />
           <Route path="/dashboard/EditSupervisor/:id" exact component={EditSupervisor} />
 
+
+          {/*---------------- Request supervisor -----------------*/}
+          <Route path="/dashboard/ViewSupervisorApproval" exact component={ViewSupervisorApproval}/>
+          <Route path="/dashboard/EditRequestSupervisor/:id" exact component={EditRequestSupervisor}/>
+          <Route path="/dashboard/AddRequestSupervisor" exact component={AddSupervisorRequest}/>
+          <Route path="/dashboard/ViewSupervisorRequest" exact component={ViewSupervisorRequest}/>
+
+
+          {/*---------------- Add groups -----------------*/}
+          <Route path="/dashboard/AddGroups" exact component={AddGroups}/>
+          <Route path="/dashboard/ViewGroupDetails" exact component={ViewGroupDetails}/>
+          <Route path="/dashboard/AdminViewGroupDetails" exact component={AdminViewGroupDetails}/>
 
 
           <Route exact path="/register"><Register /></Route>

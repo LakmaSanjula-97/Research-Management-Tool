@@ -88,7 +88,7 @@
 #busroute_table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
     border: 2px solid rgb(206, 206, 206);
     
     
@@ -97,7 +97,7 @@
 
 #busroute_table td, #busroute_table th {
     border: 1px solid rgb(189, 189, 189);
-    padding: 8px;
+    padding: 5px;
   }
   
  

@@ -2,22 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const requestCoSupervisorSchema = new Schema({
-
-    Cosupervisor_name : {
-        type :String,
-        required : true
-    },
-    
-    groupId : {
-        type :String,
-        required : true
-    },
-
-    supervisor_name : {
-        type :String,
-        required : true
-    },
+const requestSupervisorSchema = new Schema({
 
     researchTopic : {
         type : String,
@@ -29,11 +14,30 @@ const requestCoSupervisorSchema = new Schema({
         required : true
     },
 
-    description : {
+    supervisor_name : {
         type :String,
         required : true
     },
 
+    Requestmessage : {
+        type :String,
+        required : true
+    },
+
+    GroupLeader : {
+        type :String,
+        required : true
+    },
+
+    GroupLeaderITnumber : {
+        type :String,
+        required : true
+    },
+
+    sdate:{
+        type :String,
+        required : true
+    },
 
     approval:{
         type :String,
@@ -41,11 +45,12 @@ const requestCoSupervisorSchema = new Schema({
     }
 
    
+    
 
 })
 
 //mongodb data table name
-const RequestCoSupervisor = mongoose.model("RequestCoSupervisor", requestCoSupervisorSchema);
+const RequestSupervisor = mongoose.model("RequestSupervisor", requestSupervisorSchema);
 
 //export the module
-module.exports = RequestCoSupervisor;
+module.exports = RequestSupervisor;

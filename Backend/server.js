@@ -52,8 +52,7 @@ mongoose.connect(URL, {
 
 
 
-  const journeyRouter = require("./Routes/journeys");
-  app.use("/journey", journeyRouter);
+
 
   const supervisorRouter = require("./Routes/supervisorDetail");
   app.use("/supervisor", supervisorRouter);

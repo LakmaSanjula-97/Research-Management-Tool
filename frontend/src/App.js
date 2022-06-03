@@ -8,15 +8,6 @@ import { AuthContextProvider } from "./Components/context/AuthContext";
 import Dashboard from './Components/DashBoard/Dashboard';
 import Sidebar from './Components/SideBar/sidebar';
 import Navbar from './Components/Header/navbar';
-import ReportDashboard from './Components/Reports/ReportDashboard';
-
-
-import AddJourney from './Components/Manage_Journey/AddJourney';
-import ViewJourney from './Components/Manage_Journey/ViewJourney';
-import EditJourney from './Components/Manage_Journey/EditJourney';
-import ReportJourney from './Components/Reports/JourneyReport';
-
-
 
 // import AuthContext from './Components/context/AuthContext'
 import Register from "./Components/auth/Register";
@@ -52,14 +43,7 @@ function App() {
 
           <Route path="/dashboard" exact component={Dashboard} />
 
-
-          <Route path="/dashboard/addJourney" exact component={AddJourney} />
-          <Route path="/dashboard/viewJourney" exact component={ViewJourney} />
-          <Route path="/dashboard/updateJourney/:id" exact component={EditJourney} />
-          <Route path="/dashboard/journeyreport" exact component={ReportJourney} />
-
-
-          <Route path="/dashboard/reportdashboard" exact component={ReportDashboard} />
+         
 
           {/*---------------- supervisor -----------------*/}
 

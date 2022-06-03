@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import '../../Styles/managebusroute.css';
+//import '../../Styles/managebusroute.css';
 import Image2 from '../../Images/route.png';
 import '../../Styles/Dashboard.css'
 

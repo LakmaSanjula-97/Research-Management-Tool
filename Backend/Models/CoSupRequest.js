@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const requestSupervisorSchema = new Schema({
+const requestCoSupervisorSchema = new Schema({
 
     Cosupervisor_name : {
         type :String,
@@ -45,7 +45,7 @@ const requestSupervisorSchema = new Schema({
 })
 
 //mongodb data table name
-const RequestSupervisor = mongoose.model("RequestSupervisor", requestSupervisorSchema);
+const RequestCoSupervisor = mongoose.model("RequestCoSupervisor", requestCoSupervisorSchema);
 
 //export the module
-module.exports = RequestSupervisor;
+module.exports = RequestCoSupervisor;

@@ -96,12 +96,15 @@ function sidebar() {
                   <li><a href="/dashboard/AllCoSupervisor">All Co-Supervisor Requests</a></li>
                   <li><a href="/dashboard/ViewCoSupervisor">View Requests</a></li>
                 </ul>
-                
-                <li>
-                  <a href="#">
-                  <i class="fas fa-address-card"></i>&nbsp;&nbsp;&nbsp; Token
-                  </a>
+
+                <li data-toggle="collapse" data-target="#panel" className="collapsed">
+                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Panel Member<span className="arrow"></span></a>
                 </li>
+               
+                <ul className="sub-menu collapse" id="panel">
+                  <li><a href="/dashboard/AddPanelMember">Add Panel Member</a></li>
+                </ul>
+
 
                 <li>
                   <a href="/dashboard/reportdashboard">

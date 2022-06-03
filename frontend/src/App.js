@@ -33,6 +33,8 @@ import ViewCoSupRequest from './Components/CoSupervisorRequests/ViewCoSupRequest
 
 import Home from './Components/Home/home';
 import StudentNav from './Components/StudentNav/studentNav';
+import StudentHome from './Components/StudentHome/studentHome';
+import ViewSupervisor from './Components/SupervisorDetails/ViewSupervisor';
 
 axios.defaults.withCredentials = true;
 
@@ -63,7 +65,7 @@ function App() {
           <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} />
           <Route path="/dashboard/AllCoSupervisor" exact component={allCoSupRequest} />
           <Route path="/dashboard/EditCoSupervisor/:id" exact component={EditCoSupRequest} />
-          <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} />
+          {/* <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} /> */}
 
 
           {/*---------------- research topics -----------------*/}
@@ -88,7 +90,12 @@ function App() {
           <Route exact path="/login"><Login /></Route>
 
           {/* --------------------------------------------------- */}
-          <Route path="/studentNav" exact component={StudentNav} />
+          <Route path="/studentHome"  component={StudentNav} />
+          <Route path="/studentHome" exact component={StudentHome} />
+
+          {/* --------------------------------------------------- */}
+          <Route path="/studentHome/ViewCoSupervisor" exact component={ViewCoSupRequest} />
+          <Route path="/studentHome/ViewSupervisor" exact component={ViewSupervisor} />
 
         </div>
 

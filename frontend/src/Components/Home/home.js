@@ -43,7 +43,7 @@ export default class Home extends Component {
             <section id='sec4'>
                 <div class="topnav">
                     <a class="active" href="#home">Home</a>
-                    <a href="#news" style={{float:"right"}}>News</a>
+                    <a href="/studentHome/ViewCoSupervisor" style={{float:"right"}}>News</a>
                     <a href="#contact" style={{float:"right"}}>Contact Us</a>
                     <a href="#about" style={{float:"right"}}>About Us</a>
                 </div>
@@ -57,9 +57,7 @@ export default class Home extends Component {
                 <div>
                     <h1 id='text-home1'>xxxxxxxxxxxxxxxxxx -2022</h1>
                 </div>
-                <div>
-                    <h1 id='text-home1'>SLIIT</h1>
-                </div>
+                
             </section>
 
 

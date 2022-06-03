@@ -133,7 +133,7 @@ export default function AddSupervisorRequest() {
 
                 <div className="row" required>
                         <label htmlFor="passenger_id">Request message</label>
-                        <input type="text" className="form-control" id="Requestmessage" placeholder=""
+                        <textarea rows="4" cols="50" type="text" className="form-control" id="Requestmessage" placeholder=""
                          
                          onChange = {(e) => {
                             setRequestmessage(e.target.value);

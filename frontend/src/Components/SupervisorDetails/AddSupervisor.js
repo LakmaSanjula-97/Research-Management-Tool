@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from "axios";
 
 import {useHistory} from 'react-router-dom';
+import './supervisor.css'
 
 export default function AddSupervisor() {
 
@@ -50,7 +51,7 @@ export default function AddSupervisor() {
             <br></br>
             <br></br>
             <h2 id="headertext">
-                Add Journey
+                Add Supervisor
             </h2>
 
             {/* add journey form */}

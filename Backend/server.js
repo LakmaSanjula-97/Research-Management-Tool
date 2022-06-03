@@ -6,6 +6,12 @@ const cors = require("cors");
 const app = express();
 require("dotenv").config();
 
+//---------file upload-----------
+
+const path = require('path');
+const fileRoute = require('./Routes/file');
+const submitRoute = require('./Routes/submit');
+//-------------------------------
 
 const PORT = process.env.PORT || 8070;
 
@@ -32,12 +38,25 @@ mongoose.connect(URL, {
     console.log('_________MongoDB Connection Success____________')
   })
 
+  //---------------    --------------
+  //   app.use(express.static(path.join(__dirname, '..', 'build')));
+  //   app.use(fileRoute);
 
-  const journeyRouter = require("./Routes/journeys");
-  app.use("/journey", journeyRouter);
+  //   app.get('*', (req, res) => {
+  //   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+  // });
+
+  //   app.use(express.static(path.join(__dirname, '..', 'build')));
+  //   app.use(submitRoute);
+  //------------------------------------
+
+
+
+
 
   const supervisorRouter = require("./Routes/supervisorDetail");
   app.use("/supervisor", supervisorRouter);
+
 
   const GroupRegisterRoutes = require("./routes/GroupRegisterRoutes");
   app.use("/groupdetail", GroupRegisterRoutes)
@@ -47,6 +66,13 @@ mongoose.connect(URL, {
 
   const PanelMembersRoutes = require("./routes/PanelMemberRoutes")
   app.use("/panelMembers", PanelMembersRoutes)
+
+
+  const coSupRequsetRouter = require("./Routes/coSupRequest");
+  app.use("/coSupRequset", coSupRequsetRouter);
+
+  const researchTopicRouter = require("./Routes/researchTopic");
+  app.use("/researchTopic", researchTopicRouter);
 
 
 

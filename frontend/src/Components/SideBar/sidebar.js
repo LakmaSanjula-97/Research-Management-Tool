@@ -56,20 +56,20 @@ function sidebar() {
 
 
                 <li data-toggle="collapse" data-target="#routes" className="collapsed">
-                  <a href="#"><i class="fas fa-route"></i>&nbsp;&nbsp;&nbsp; Routes <span className="arrow"></span></a>
+                  <a href="#"><i class="fas fa-route"></i>&nbsp;&nbsp;&nbsp; Research Topic <span className="arrow"></span></a>
                 </li>  
                 <ul className="sub-menu collapse" id="routes">
-                  <li><a href="/dashboard/addBusroute">Add Routes</a></li>
-                  <li><a href="/dashboard/viewBusroute">All Routes</a></li>
+                  <li><a href="/dashboard/AddResearchTopic">Add Research  Topic</a></li>
+                  <li><a href="/dashboard/AllResearchTopic">All Research Topic</a></li>
                 </ul>
 
 
                 <li data-toggle="collapse" data-target="#timetable" className="collapsed">
-                  <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; Timetable <span className="arrow"></span></a>
+                  <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; Template <span className="arrow"></span></a>
                 </li>
                 <ul className="sub-menu collapse" id="timetable">
-                  <li><a href="/dashboard/addTimetable">Add Timetable</a></li>
-                  <li><a href="/dashboard/viewTimetable">All Timetables</a></li>
+                  <li><a href="/dashboard/fileupload">upload template</a></li>
+                  <li><a href="/dashboard/filelist">All Templates</a></li>
                 </ul>
 
                 <li data-toggle="collapse" data-target="#journey" className="collapsed">
@@ -81,13 +81,22 @@ function sidebar() {
                 </ul>
 
                 <li data-toggle="collapse" data-target="#driver" className="collapsed">
-                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Drivers<span className="arrow"></span></a>
+                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Submissions<span className="arrow"></span></a>
                 </li>
                 <ul className="sub-menu collapse" id="driver">
-                  <li><a href="/dashboard/addDriver">Add Driver</a></li>
-                  <li><a href="/dashboard/viewDriver">All Drivers</a></li>
+                  <li><a href="/dashboard/submitfileupload">Add Submissions</a></li>
+                  <li><a href="/dashboard/submitfilelist">All Submissions</a></li>
                 </ul>
 
+                <li data-toggle="collapse" data-target="#cosupervisor" className="collapsed">
+                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Co-Supervisor Requests<span className="arrow"></span></a>
+                </li>
+                <ul className="sub-menu collapse" id="cosupervisor">
+                  <li><a href="/dashboard/AddCoSupervisor">Add Co-Supervisor Requests</a></li>
+                  <li><a href="/dashboard/AllCoSupervisor">All Co-Supervisor Requests</a></li>
+                  <li><a href="/dashboard/ViewCoSupervisor">View Requests</a></li>
+                </ul>
+                
                 <li>
                   <a href="#">
                   <i class="fas fa-address-card"></i>&nbsp;&nbsp;&nbsp; Token

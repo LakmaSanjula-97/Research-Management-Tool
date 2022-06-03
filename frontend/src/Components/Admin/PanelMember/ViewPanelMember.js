@@ -3,7 +3,7 @@ import axios from 'axios';
 
 
 
-export default class allSupervisor extends Component {
+export default class ViewPanelMember extends Component {
 
     constructor(props){
         super(props);
@@ -13,7 +13,7 @@ export default class allSupervisor extends Component {
 
     //auto refreh the code
     componentDidMount(){
-        axios.get('http://localhost:8070/supervisor/').then(response=>{
+        axios.get('http://localhost:8070/panelMembers/').then(response=>{
             this.setState({supervisors: response.data})
         }).catch(function (error){
             console.log(error);
@@ -22,7 +22,7 @@ export default class allSupervisor extends Component {
 
     // update code
     componentDidUpdate(){
-        axios.get('http://localhost:8070/supervisor/').then(response =>{
+        axios.get('http://localhost:8070/panelMembers/').then(response =>{
             this.setState({supervisors:response.data})
         }).catch(function (error){
             console.log(error);
@@ -31,7 +31,7 @@ export default class allSupervisor extends Component {
 
     // delete 
     deleteSupervisor=(id)=>{
-        axios.delete(`http://localhost:8070/supervisor/delete/${id}`).then((res) =>{
+        axios.delete(`http://localhost:8070/panelMembers/delete/${id}`).then((res) =>{
             
                 //alert("Delete Successfully");
 
@@ -43,7 +43,7 @@ export default class allSupervisor extends Component {
 
 
     addJourney(){
-        this.props.history.push('/dashboard/addJourney');
+        this.props.history.push('/admin/SupervisorView');
     }
 
     searchSupervisorName(event){
@@ -56,9 +56,9 @@ export default class allSupervisor extends Component {
 
     render(){
         
-        let filtersupervisor_name = this.state.supervisors.filter((
+        let filterGroup_Id = this.state.supervisors.filter((
             p)=>{
-                return p.supervisor_name.indexOf(this.state.
+                return p.Group_Id.indexOf(this.state.
                     searchId)!==-1;
             }
         );
@@ -68,23 +68,18 @@ export default class allSupervisor extends Component {
             <div>
 
                 <div id="topic">
-                    <h2>Dashboard - View Request Supervisor</h2>
+                    <h2>Dashboard - Manage Panel Members</h2>
                     <hr id="hr"></hr>
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="search by group id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
-                <div>
-                    <a className="btn btn-warning" id="btn3" href="/dashboard/addJourney">
-                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Add Supervisor
-                    </a>
-                </div>
-
+               
                 <div id="table1">
 
                     <table id="journey_table" style={{textAlign:'center'}}>
@@ -93,21 +88,20 @@ export default class allSupervisor extends Component {
                             <tr style={{'textAlign':'left'}}>
                                 <span >
 
-                                    <span id="text1">Supervisor</span>
+                                    <span id="text1">Panel_Members</span>
 
-
-                                                             
-
+                                                          
 
                                 </span>
                             </tr>
 
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Name</th>
-                                <th style={{'textAlign':'center'}}>Email</th>
-                                <th style={{'textAlign':'center'}}>Department</th>
-                                <th style={{'textAlign':'center'}}>Research Area</th>
+                                <th style={{'textAlign':'center'}}>Group Id</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 1</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 2</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 3</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 4</th>
                                 
                             </tr>
 
@@ -115,17 +109,18 @@ export default class allSupervisor extends Component {
                         
                         <tbody>
 
-                            {filtersupervisor_name.map((p, index)=>{
+                            {filterGroup_Id.map((p, index)=>{
                                 return <tr key={index}>
                                      
-                                    <td>{p.supervisor_name}</td>
-                                    <td>{p.supervisor_email}</td>
-                                    <td>{p.supervisor_faculty}</td>
-                                    <td>{p.supervisor_research_area}</td>
+                                    <td>{p.Group_Id}</td>
+                                    <td>{p.panelmember1}</td>
+                                    <td>{p.panelmember2}</td>
+                                    <td>{p.panelmember3}</td>
+                                    <td>{p.panelmember4}</td>
                                     
 
                                     <td>
-                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/EditSupervisor/${p._id}`}>
+                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/UpdatePanelMember/${p._id}`}>
                                             <i class="fas fa-edit "></i>&nbsp;&nbsp;Edit
                                         </a>
                                       

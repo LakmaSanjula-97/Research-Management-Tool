@@ -57,11 +57,23 @@ mongoose.connect(URL, {
   const supervisorRouter = require("./Routes/supervisorDetail");
   app.use("/supervisor", supervisorRouter);
 
+
+  const GroupRegisterRoutes = require("./routes/GroupRegisterRoutes");
+  app.use("/groupdetail", GroupRegisterRoutes)
+
+  const requestSupervisorRoutes = require("./routes/requestSupervisorRoutes");
+  app.use("/requestSupervisor", requestSupervisorRoutes)
+
+  const PanelMembersRoutes = require("./routes/PanelMemberRoutes")
+  app.use("/panelMembers", PanelMembersRoutes)
+
+
   const coSupRequsetRouter = require("./Routes/coSupRequest");
   app.use("/coSupRequset", coSupRequsetRouter);
 
   const researchTopicRouter = require("./Routes/researchTopic");
   app.use("/researchTopic", researchTopicRouter);
+
 
 
 

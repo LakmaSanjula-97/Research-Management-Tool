@@ -73,11 +73,11 @@ function sidebar() {
                 </ul>
 
                 <li data-toggle="collapse" data-target="#journey" className="collapsed">
-                  <a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp; Journey <span className="arrow"></span></a>
+                  <a href="#"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;&nbsp; Supervisor Request <span className="arrow"></span></a>
                 </li>
                 <ul className="sub-menu collapse" id="journey">
-                  <li><a href="/dashboard/addJourney">Add Journey</a></li>
-                  <li><a href="/dashboard/viewJourney">All Journeys</a></li>
+                  <li><a href="/dashboard/AddRequestSupervisor">Add Supervisor</a></li>
+                  <li><a href="/dashboard/ViewSupervisorApproval">View Supervisor status</a></li>
                 </ul>
 
                 <li data-toggle="collapse" data-target="#driver" className="collapsed">
@@ -96,12 +96,15 @@ function sidebar() {
                   <li><a href="/dashboard/AllCoSupervisor">All Co-Supervisor Requests</a></li>
                   <li><a href="/dashboard/ViewCoSupervisor">View Requests</a></li>
                 </ul>
-                
-                <li>
-                  <a href="#">
-                  <i class="fas fa-address-card"></i>&nbsp;&nbsp;&nbsp; Token
-                  </a>
+
+                <li data-toggle="collapse" data-target="#panel" className="collapsed">
+                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Panel Member<span className="arrow"></span></a>
                 </li>
+               
+                <ul className="sub-menu collapse" id="panel">
+                  <li><a href="/dashboard/AddPanelMember">Add Panel Member</a></li>
+                </ul>
+
 
                 <li>
                   <a href="/dashboard/reportdashboard">

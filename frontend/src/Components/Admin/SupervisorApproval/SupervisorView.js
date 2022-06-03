@@ -75,7 +75,7 @@ export default class ViewSupervisorApproval extends Component {
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="search by supervisor name" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
@@ -131,9 +131,6 @@ export default class ViewSupervisorApproval extends Component {
                                         </a>
                                       
                                     
-                                        <a className="btn btn-danger" id="btn2" onClick={() => this.deleteSupervisor(p._id)}>
-                                            <i class="fa fa-trash blackiconcolor" aria-hidden="true"></i>&nbsp;&nbsp;Delete&nbsp;
-                                        </a>
                                     </td>
 
 

@@ -1,11 +1,9 @@
-
-
 import React, {Component} from 'react';
 import axios from 'axios';
 
 
 
-export default class ViewSupervisorRequest extends Component {
+export default class ViewPanelMember extends Component {
 
     constructor(props){
         super(props);
@@ -15,7 +13,7 @@ export default class ViewSupervisorRequest extends Component {
 
     //auto refreh the code
     componentDidMount(){
-        axios.get('http://localhost:8070/requestSupervisor/').then(response=>{
+        axios.get('http://localhost:8070/panelMembers/').then(response=>{
             this.setState({supervisors: response.data})
         }).catch(function (error){
             console.log(error);
@@ -24,7 +22,7 @@ export default class ViewSupervisorRequest extends Component {
 
     // update code
     componentDidUpdate(){
-        axios.get('http://localhost:8070/requestSupervisor/').then(response =>{
+        axios.get('http://localhost:8070/panelMembers/').then(response =>{
             this.setState({supervisors:response.data})
         }).catch(function (error){
             console.log(error);
@@ -33,7 +31,7 @@ export default class ViewSupervisorRequest extends Component {
 
     // delete 
     deleteSupervisor=(id)=>{
-        axios.delete(`http://localhost:8070/requestSupervisor/delete/${id}`).then((res) =>{
+        axios.delete(`http://localhost:8070/panelMembers/delete/${id}`).then((res) =>{
             
                 //alert("Delete Successfully");
 
@@ -58,9 +56,9 @@ export default class ViewSupervisorRequest extends Component {
 
     render(){
         
-        let filterGroupLeader = this.state.supervisors.filter((
+        let filterGroup_Id = this.state.supervisors.filter((
             p)=>{
-                return p.supervisor_name.indexOf(this.state.
+                return p.Group_Id.indexOf(this.state.
                     searchId)!==-1;
             }
         );
@@ -70,14 +68,14 @@ export default class ViewSupervisorRequest extends Component {
             <div>
 
                 <div id="topic">
-                    <h2>Dashboard - View Supervisor Approval</h2>
+                    <h2>Dashboard - Manage Panel Members</h2>
                     <hr id="hr"></hr>
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by GroupLeader" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="search by group id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
@@ -90,7 +88,7 @@ export default class ViewSupervisorRequest extends Component {
                             <tr style={{'textAlign':'left'}}>
                                 <span >
 
-                                    <span id="text1">Approval</span>
+                                    <span id="text1">Panel_Members</span>
 
                                                           
 
@@ -99,13 +97,11 @@ export default class ViewSupervisorRequest extends Component {
 
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Research Topic</th>
-                                <th style={{'textAlign':'center'}}>Research Area</th>
-                                <th style={{'textAlign':'center'}}>Supervisor Name</th>
-                                <th style={{'textAlign':'center'}}>Group Leader</th>
-                                <th style={{'textAlign':'center'}}>Leader ITnumber</th>
-                                <th style={{'textAlign':'center'}}>Request Message</th>
-                                <th style={{'textAlign':'center'}}>Approval</th>
+                                <th style={{'textAlign':'center'}}>Group Id</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 1</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 2</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 3</th>
+                                <th style={{'textAlign':'center'}}>Panel Member 4</th>
                                 
                             </tr>
 
@@ -113,20 +109,20 @@ export default class ViewSupervisorRequest extends Component {
                         
                         <tbody>
 
-                            {filterGroupLeader.map((p, index)=>{
+                            {filterGroup_Id.map((p, index)=>{
                                 return <tr key={index}>
                                      
-                                    <td>{p.researchTopic}</td>
-                                    <td>{p.research_area}</td>
-                                    <td>{p.supervisor_name}</td>
-                                    <td>{p.GroupLeader}</td>
-                                    <td>{p.GroupLeaderITnumber}</td>
-                                    <td>{p.Requestmessage}</td>
-                                    <td>{p.approval}</td>
+                                    <td>{p.Group_Id}</td>
+                                    <td>{p.panelmember1}</td>
+                                    <td>{p.panelmember2}</td>
+                                    <td>{p.panelmember3}</td>
+                                    <td>{p.panelmember4}</td>
                                     
 
                                     <td>
-                                        
+                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/UpdatePanelMember/${p._id}`}>
+                                            <i class="fas fa-edit "></i>&nbsp;&nbsp;Edit
+                                        </a>
                                       
                                     
                                         <a className="btn btn-danger" id="btn2" onClick={() => this.deleteSupervisor(p._id)}>

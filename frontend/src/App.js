@@ -38,6 +38,13 @@ import ViewSupervisorRequest from './Components/RequestSupervisor/ViewSupervisor
 import AddGroups from './Components/GroupRegister/AddGroups';
 import ViewGroupDetails from './Components/GroupRegister/ViewGroupDetails';
 import AdminViewGroupDetails from './Components/Admin/GroupId/AdminViewGroupDetails';
+import UpdateGroupId from './Components/Admin/GroupId/UpdateGroupId';
+
+
+import AddPanelMember from './Components/Admin/PanelMember/AddPanelMember';
+import ViewPanelMember from './Components/Admin/PanelMember/ViewPanelMember';
+import UpdatePanelMember from './Components/Admin/PanelMember/UpdatePanelMembers';
+import StudentViewPanelMember from './Components/StudentPanelView/StudentViewPanelMembers';
 
 
 axios.defaults.withCredentials = true;
@@ -83,6 +90,13 @@ function App() {
           <Route path="/dashboard/AddGroups" exact component={AddGroups}/>
           <Route path="/dashboard/ViewGroupDetails" exact component={ViewGroupDetails}/>
           <Route path="/dashboard/AdminViewGroupDetails" exact component={AdminViewGroupDetails}/>
+          <Route path="/dashboard/UpdateGroupId/:id" exact component={UpdateGroupId}/>
+
+           {/*---------------- Add Panel member -----------------*/}
+           <Route path="/dashboard/AddPanelMember" exact component={AddPanelMember}/>
+           <Route path="/dashboard/ViewPanelMember" exact component={ViewPanelMember}/>
+           <Route path="/dashboard/UpdatePanelMember/:id" exact component={UpdatePanelMember}/>
+           <Route path="/dashboard/StudentViewPanelMember" exact component={StudentViewPanelMember}/>
 
 
           <Route exact path="/register"><Register /></Route>

@@ -52,6 +52,10 @@ import UpdatePanelMember from './Components/Admin/PanelMember/UpdatePanelMembers
 import StudentViewPanelMember from './Components/StudentPanelView/StudentViewPanelMembers';
 
 
+import AddMarkingScheme from './Components/Admin/MarkingScheme/AddMarkingScheme';
+import ViewMarkingScheme from './Components/Admin/MarkingScheme/ViewMarkingScheme';
+
+
 axios.defaults.withCredentials = true;
 
 function App() {
@@ -121,6 +125,10 @@ function App() {
           <Route path="/dashboard/submitfilelist" exact component={SubmitList} />
 
           {/* ------------------------------------------- */}
+
+          <Route path="/dashboard/AddMarkingScheme" exact component={AddMarkingScheme}/>
+          <Route path="/dashboard/ViewMarkingScheme" exact component={ViewMarkingScheme}/>
+
 
           
           <Route path="/" exact component={Home} />

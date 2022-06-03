@@ -1,5 +1,5 @@
 #RegisterPage{
-    background-image: url('../Images/backgroundloginimg.jfif');
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: 100% 19.1cm;
     border: 1px solid rgb(255, 255, 255);
@@ -12,13 +12,13 @@
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(240, 234, 234);
     margin-top: 3cm;
-    width: 12cm;
-    height: 12.5cm;
+    width: 13cm;
+    height: 13cm;
     padding: 30px;
-    margin-left: 5cm;
+    margin-left: 7cm;
     
     border-radius: 1px;
-    margin-left: 10cm;
+    
 }
 
 /* #formlogin1{
@@ -81,17 +81,7 @@
     margin-left: -4cm;
 } */
 
-#c2{
-    background-image: url('../Images/bluebackground1.jpg');
-    background-repeat: no-repeat;
-    background-size: 12cm 12.5cm;
-    width: 12cm;
-    height: 12.5cm;
-    background-color: darkblue;
-    margin-left: 21.5cm;
-   
-    margin-top: -12.5cm;
-}
+
 #rtext5{
     color: #01012e;
     margin-left: 2cm;
@@ -112,4 +102,12 @@
     margin-left: 0.7cm;
     font-size: 14px;
     font-family:serif;
+}
+
+#imageR1{
+    width: 15cm;
+    height: 14cm;
+    margin-left: 21cm;
+    margin-top: -14cm;
+    position: absolute;
 }

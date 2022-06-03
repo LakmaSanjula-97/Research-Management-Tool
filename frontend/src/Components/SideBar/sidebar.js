@@ -88,6 +88,15 @@ function sidebar() {
                   <li><a href="/dashboard/submitfilelist">All Submissions</a></li>
                 </ul>
 
+                <li data-toggle="collapse" data-target="#cosupervisor" className="collapsed">
+                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Co-Supervisor Requests<span className="arrow"></span></a>
+                </li>
+                <ul className="sub-menu collapse" id="cosupervisor">
+                  <li><a href="/dashboard/AddCoSupervisor">Add Co-Supervisor Requests</a></li>
+                  <li><a href="/dashboard/AllCoSupervisor">All Co-Supervisor Requests</a></li>
+                  <li><a href="/dashboard/ViewCoSupervisor">View Requests</a></li>
+                </ul>
+                
                 <li>
                   <a href="#">
                   <i class="fas fa-address-card"></i>&nbsp;&nbsp;&nbsp; Token

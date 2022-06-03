@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from "axios"
 import AuthContext from '../context/AuthContext';
 import '../../Styles/Login.css'
-//ort Image1 from '../../Images/Busreport_image.jpg'
+import LOGImage1 from '../../Images/RMT4.png'
 export default function Loggin() {
  
     const[email,setEmail] = useState("");
@@ -47,7 +47,7 @@ export default function Loggin() {
                    
                 </div>
                 <div  id="formlogin">
-                    <h1 id="ltext1">LOGIN</h1>
+                    <h1 id="ltext1">ADMIN LOGIN</h1>
                     <br></br>
                     
                     <input type="mail" className="form-control" name="Email" id="tb1" placeholder="E-mail Address"  
@@ -69,28 +69,16 @@ export default function Loggin() {
                    <Link to="/register" className="regLink" id="ltext4">Create an Account</Link>
 
                    
-                    {/* <div id="topicname">
-                    <i class="fas fa-umbrella-beach fa-4x iconcolor"></i>
-                      <span>TravelLanka</span>
-    
-                    </div> */}
+                  
                    
                 </div>
                 
             </div>
 
-            {/* <div >
-                <img src={Image1} id="image1"/>
-            </div> */}
-            <div id="c1">
-                <br></br><br></br><br></br><br></br><br></br><br></br>
-                <div id="ltext6">
-                    WELCOME &nbsp;&nbsp; BACK  <br></br><i id="ltext5"> TravelLanka</i><br></br>
-                    <span id="ltext7">
-                        No matter where you’re going from, we take you there..
-                    </span>
-                </div>
+            <div >
+                <img src={LOGImage1} id="imageL1"/>
             </div>
+           
             
         </div>
     )

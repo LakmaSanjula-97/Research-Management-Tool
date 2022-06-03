@@ -1,5 +1,5 @@
 #LoginPage{
-    background-image: url('../Images/backgroundloginimg.jfif');
+    background-image: url('');
     background-repeat: no-repeat;
     background-size: 100% 19.1cm;
     border: 1px solid rgb(255, 255, 255);
@@ -13,12 +13,10 @@
     border: 2px solid rgb(240, 234, 234);
     margin-top: 3cm;
     width: 12cm;
-    height: 12.5cm;
+    height: 13cm;
     padding: 30px;
-    margin-left: 5cm;
-    
     border-radius: 1px;
-    margin-left: 10cm;
+    margin-left: 8cm;
 }
 
 /* #formlogin1{
@@ -28,7 +26,7 @@
 
 #ltext1{
     color: rgb(0, 0, 0);
-    margin-left: 3.5cm;
+    margin-left: 1.5cm;
     font-size: 40px;
     font-weight: bold;
     font-family:serif;
@@ -60,7 +58,7 @@
     text-decoration: none;
 }
 #ltext4:hover{
-    color: rgb(19, 2, 255);
+    color: rgb(13, 0, 191);
     text-decoration: none;
 }
 
@@ -78,15 +76,15 @@
 } */
 
 #c1{
-    background-image: url('../Images/bluebackground1.jpg');
+    background-image: url('../Images/RMT4.png');
     background-repeat: no-repeat;
     background-size: 12cm 12.5cm;
-    width: 12cm;
-    height: 12.5cm;
-    background-color: darkblue;
+    width: 15cm;
+    height: 15.5cm;
+    background-color: rgb(255, 255, 255);
     margin-left: 21.5cm;
    
-    margin-top: -12.5cm;
+    margin-top: -10.5cm;
 }
 #ltext5{
     color: #01012e;
@@ -108,4 +106,12 @@
     margin-left: 0.7cm;
     font-size: 14px;
     font-family:serif;
+}
+
+#imageL1{
+    width: 13cm;
+    height: 12cm;
+    margin-left: 22cm;
+    margin-top: -12cm;
+    position: absolute;
 }

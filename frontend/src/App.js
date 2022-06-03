@@ -26,6 +26,13 @@ import FileUpload from './Components/FileUpload/FileUpload';
 import FilesList from './Components/FileUpload/FilesList';
 import SubmitUpload from './Components/Submissions/SubmissionUpload';
 import SubmitList from './Components/Submissions/SubmitList';
+import AddCoSupRequest from './Components/CoSupervisorRequests/AddCoSupRequest';
+import allCoSupRequest from './Components/CoSupervisorRequests/AllCoSupRequest';
+import EditCoSupRequest from './Components/CoSupervisorRequests/EditCoSupReqquest';
+import ViewCoSupRequest from './Components/CoSupervisorRequests/ViewCoSupRequest';
+
+import Home from './Components/Home/home';
+import StudentNav from './Components/StudentNav/studentNav';
 
 axios.defaults.withCredentials = true;
 
@@ -51,6 +58,13 @@ function App() {
           <Route path="/dashboard/AllSupervisor" exact component={allSupervisor} />
           <Route path="/dashboard/EditSupervisor/:id" exact component={EditSupervisor} />
 
+          {/*---------------- cosupervisor req-----------------*/}
+
+          <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} />
+          <Route path="/dashboard/AllCoSupervisor" exact component={allCoSupRequest} />
+          <Route path="/dashboard/EditCoSupervisor/:id" exact component={EditCoSupRequest} />
+          <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} />
+
 
           {/*---------------- research topics -----------------*/}
 
@@ -68,10 +82,13 @@ function App() {
 
           {/* ------------------------------------------- */}
 
+          
+          <Route path="/" exact component={Home} />
           <Route exact path="/register"><Register /></Route>
-          <Route exact path="/"><Login /></Route>
+          <Route exact path="/login"><Login /></Route>
 
-
+          {/* --------------------------------------------------- */}
+          <Route path="/studentNav" exact component={StudentNav} />
 
         </div>
 
@@ -82,3 +99,4 @@ function App() {
 }
 
 export default App;
+

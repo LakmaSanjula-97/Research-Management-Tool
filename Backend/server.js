@@ -39,15 +39,15 @@ mongoose.connect(URL, {
   })
 
   //---------------    --------------
-    app.use(express.static(path.join(__dirname, '..', 'build')));
-    app.use(fileRoute);
+  //   app.use(express.static(path.join(__dirname, '..', 'build')));
+  //   app.use(fileRoute);
 
-    app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
-  });
-//------------------------
-  app.use(express.static(path.join(__dirname, '..', 'build')));
-  app.use(submitRoute);
+  //   app.get('*', (req, res) => {
+  //   res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+  // });
+
+  //   app.use(express.static(path.join(__dirname, '..', 'build')));
+  //   app.use(submitRoute);
   //------------------------------------
 
 
@@ -56,6 +56,9 @@ mongoose.connect(URL, {
 
   const supervisorRouter = require("./Routes/supervisorDetail");
   app.use("/supervisor", supervisorRouter);
+
+  const coSupRequsetRouter = require("./Routes/coSupRequest");
+  app.use("/coSupRequset", coSupRequsetRouter);
 
   const researchTopicRouter = require("./Routes/researchTopic");
   app.use("/researchTopic", researchTopicRouter);

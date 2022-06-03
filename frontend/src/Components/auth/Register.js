@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios"
 import validation from 'validator'
 import '../../Styles/Register.css'
+import REGImage1 from '../../Images/RMT5.png'
 
 export default function Register() {
 
@@ -94,14 +95,9 @@ export default function Register() {
                
             </div>
 
-            <div id="c2">
-                <br></br><br></br><br></br><br></br><br></br><br></br>
-                <div id="rtext6">
-                    WELCOME &nbsp;&nbsp; TO <br></br><i id="rtext5"> TravelLanka</i><br></br>
-                    <span id="rtext7">
-                        No matter where you’re going from, we take you there..
-                    </span>
-                </div>
+            
+            <div >
+                <img src={REGImage1} id="imageR1"/>
             </div>
         
         </div>

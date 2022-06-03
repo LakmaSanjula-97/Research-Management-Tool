@@ -8,15 +8,6 @@ import { AuthContextProvider } from "./Components/context/AuthContext";
 import Dashboard from './Components/DashBoard/Dashboard';
 import Sidebar from './Components/SideBar/sidebar';
 import Navbar from './Components/Header/navbar';
-import ReportDashboard from './Components/Reports/ReportDashboard';
-
-
-import AddJourney from './Components/Manage_Journey/AddJourney';
-import ViewJourney from './Components/Manage_Journey/ViewJourney';
-import EditJourney from './Components/Manage_Journey/EditJourney';
-import ReportJourney from './Components/Reports/JourneyReport';
-
-
 
 // import AuthContext from './Components/context/AuthContext'
 import Register from "./Components/auth/Register";
@@ -27,7 +18,21 @@ import AuthContext from './Components/context/AuthContext';
 import AddSupervisor from './Components/SupervisorDetails/AddSupervisor';
 import allSupervisor from './Components/SupervisorDetails/AllSupervisor';
 import EditSupervisor from './Components/SupervisorDetails/EditSupervisor';
+import AddResearchTopic from './Components/ResearchTopics/AddResearchTopic';
+import allresearchTopic from './Components/ResearchTopics/AllResearchTopic';
+import EditresearchTopic from './Components/ResearchTopics/EditResearchtopic';
 
+import FileUpload from './Components/FileUpload/FileUpload';
+import FilesList from './Components/FileUpload/FilesList';
+import SubmitUpload from './Components/Submissions/SubmissionUpload';
+import SubmitList from './Components/Submissions/SubmitList';
+import AddCoSupRequest from './Components/CoSupervisorRequests/AddCoSupRequest';
+import allCoSupRequest from './Components/CoSupervisorRequests/AllCoSupRequest';
+import EditCoSupRequest from './Components/CoSupervisorRequests/EditCoSupReqquest';
+import ViewCoSupRequest from './Components/CoSupervisorRequests/ViewCoSupRequest';
+
+import Home from './Components/Home/home';
+import StudentNav from './Components/StudentNav/studentNav';
 
 axios.defaults.withCredentials = true;
 
@@ -45,14 +50,7 @@ function App() {
 
           <Route path="/dashboard" exact component={Dashboard} />
 
-
-          <Route path="/dashboard/addJourney" exact component={AddJourney} />
-          <Route path="/dashboard/viewJourney" exact component={ViewJourney} />
-          <Route path="/dashboard/updateJourney/:id" exact component={EditJourney} />
-          <Route path="/dashboard/journeyreport" exact component={ReportJourney} />
-
-
-          <Route path="/dashboard/reportdashboard" exact component={ReportDashboard} />
+         
 
           {/*---------------- supervisor -----------------*/}
 
@@ -60,12 +58,37 @@ function App() {
           <Route path="/dashboard/AllSupervisor" exact component={allSupervisor} />
           <Route path="/dashboard/EditSupervisor/:id" exact component={EditSupervisor} />
 
+          {/*---------------- cosupervisor req-----------------*/}
+
+          <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} />
+          <Route path="/dashboard/AllCoSupervisor" exact component={allCoSupRequest} />
+          <Route path="/dashboard/EditCoSupervisor/:id" exact component={EditCoSupRequest} />
+          <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} />
 
 
+          {/*---------------- research topics -----------------*/}
+
+          <Route path="/dashboard/AddResearchTopic" exact component={AddResearchTopic} />
+          <Route path="/dashboard/AllResearchTopic" exact component={allresearchTopic} />
+          <Route path="/dashboard/EditResearchTopic/:id" exact component={EditresearchTopic} />
+
+          {/* --------------- file ------------ */}
+
+          <Route path="/dashboard/fileupload" exact component={FileUpload}   />
+          <Route path="/dashboard/filelist" exact component={FilesList} />
+
+          <Route path="/dashboard/submitfileupload" exact component={SubmitUpload}   />
+          <Route path="/dashboard/submitfilelist" exact component={SubmitList} />
+
+          {/* ------------------------------------------- */}
+
+          
+          <Route path="/" exact component={Home} />
           <Route exact path="/register"><Register /></Route>
-          <Route exact path="/"><Login /></Route>
+          <Route exact path="/login"><Login /></Route>
 
-
+          {/* --------------------------------------------------- */}
+          <Route path="/studentNav" exact component={StudentNav} />
 
         </div>
 
@@ -76,3 +99,4 @@ function App() {
 }
 
 export default App;
+

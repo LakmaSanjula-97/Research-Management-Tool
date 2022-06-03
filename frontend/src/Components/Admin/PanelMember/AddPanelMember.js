@@ -62,7 +62,7 @@ export default function AddPanelMember() {
 
                 <div className="row">
                     <label htmlFor="route">Group Id </label>
-                    <input type="text" className="form-control" id="Group_Id" placeholder="" required
+                    <input type="text" className="form-control" id="Group_Id" data-testid="groupidtest" placeholder="" required
                      onChange = {(e) => {
                         setGroup_Id(e.target.value);
                     }}   
@@ -194,9 +194,9 @@ export default function AddPanelMember() {
                 
 
                     {/* ------reset button---- */}
-                <button type="reset"  id = "#">Reset</button>
+                <button type="reset" data-testid="buttonreset"  id = "#">Reset</button>
 
-                <button type="submit"  id = "#">Add</button>
+                <button type="submit" data-testid="buttonsubmit"  id = "#">Add</button>
             </form>
 
             

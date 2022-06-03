@@ -10,7 +10,7 @@ require("dotenv").config();
 
 const path = require('path');
 const fileRoute = require('./Routes/file');
-
+const submitRoute = require('./Routes/submit');
 //-------------------------------
 
 const PORT = process.env.PORT || 8070;
@@ -45,7 +45,9 @@ mongoose.connect(URL, {
     app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
   });
-
+//------------------------
+  app.use(express.static(path.join(__dirname, '..', 'build')));
+  app.use(submitRoute);
   //------------------------------------
 
 

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import download from 'downloadjs';
 import axios from 'axios';
 
-import './styles.scss';
+import './styles.scss'
 
 
 
-const FilesList = () => {
+const SubmitList = () => {
   const [filesList, setFilesList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -40,39 +40,20 @@ const FilesList = () => {
     }
   };
 
-  // --------------------------------
-
-// const getData = () => {
-//     axios.get(`http://localhost:8070/getAllFiles`)
-//         .then((getData) => {
-//             setUser(getData.data);
-//         })
-// }
-
-// const onDelete = (_id) => {
-//     axios.delete(`http://localhost:8070/delete/${_id}`)
-//     .then(() => {
-//         getData();
-//     })
-// }
-
-  
-
-  // -------------------------------
-
   return (
     <div className="files-container">
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
 
-      <h2>All Templates</h2>
+      <h2>All Submissions</h2>
       <br></br>
+
+
       <table className="files-table">
-        
-        <thead> 
+        <thead>
           <tr>
             <th>Title</th>
             <th>Description</th>
-            <th>Download File</th>
+            <th>Download Submissions</th>
           </tr>
         </thead>
         <tbody>
@@ -89,13 +70,9 @@ const FilesList = () => {
                         downloadFile(_id, file_path, file_mimetype)
                       }
                     >
-                      Download
+                      Download Link 
                     </a>
                   </td>
-                  {/* <td>
-
-                  <button className="btn btn-secondary" onClick={() => onDelete(_id)}> Delete</button>
-                  </td> */}
                 </tr>
               )
             )
@@ -112,4 +89,4 @@ const FilesList = () => {
   );
 };
 
-export default FilesList;
+export default SubmitList;

@@ -81,11 +81,11 @@ function sidebar() {
                 </ul>
 
                 <li data-toggle="collapse" data-target="#driver" className="collapsed">
-                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Drivers<span className="arrow"></span></a>
+                  <a href="#"> <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Submissions<span className="arrow"></span></a>
                 </li>
                 <ul className="sub-menu collapse" id="driver">
-                  <li><a href="/dashboard/addDriver">Add Driver</a></li>
-                  <li><a href="/dashboard/viewDriver">All Drivers</a></li>
+                  <li><a href="/dashboard/submitfileupload">Add Submissions</a></li>
+                  <li><a href="/dashboard/submitfilelist">All Submissions</a></li>
                 </ul>
 
                 <li>

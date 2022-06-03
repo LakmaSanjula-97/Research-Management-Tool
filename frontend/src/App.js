@@ -33,6 +33,8 @@ import EditresearchTopic from './Components/ResearchTopics/EditResearchtopic';
 
 import FileUpload from './Components/FileUpload/FileUpload';
 import FilesList from './Components/FileUpload/FilesList';
+import SubmitUpload from './Components/Submissions/SubmissionUpload';
+import SubmitList from './Components/Submissions/SubmitList';
 
 axios.defaults.withCredentials = true;
 
@@ -76,6 +78,9 @@ function App() {
 
           <Route path="/dashboard/fileupload" exact component={FileUpload}   />
           <Route path="/dashboard/filelist" exact component={FilesList} />
+
+          <Route path="/dashboard/submitfileupload" exact component={SubmitUpload}   />
+          <Route path="/dashboard/submitfilelist" exact component={SubmitList} />
 
           {/* ------------------------------------------- */}
 

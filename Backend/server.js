@@ -75,6 +75,8 @@ mongoose.connect(URL, {
   app.use("/researchTopic", researchTopicRouter);
 
 
+  const MarkingRoutes = require("./routes/MarkingScheme")
+  app.use("/marking", MarkingRoutes)
 
 
   

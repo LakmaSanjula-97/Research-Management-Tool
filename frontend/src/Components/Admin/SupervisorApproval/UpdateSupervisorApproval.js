@@ -182,10 +182,20 @@ export default class EditRequestSupervisor extends Component {
 
                     <div className="row" required>
                         <label htmlFor="from">Approval</label>
-                        <input type="text" className="form-control" id="approval"  placeholder="" 
+                        {/* <input type="text" className="form-control" id="approval"  placeholder="" 
                             value={this.state.approval}
                             onChange = {this.onChangeapproval}
-                        />
+                        /> */}
+
+                        <select className="form-control" id="approval" required  style={{height:"1cm"}}
+                                value={this.state.approval}
+                                onChange = {this.onChangeapproval}
+                            >
+                                <option>Select </option>
+                                <option value="Approved">Approved</option>
+                                <option value="Not-Approved">Not Approved</option>
+                                
+                            </select>
                     </div>
 
 

@@ -6,6 +6,12 @@ const cors = require("cors");
 const app = express();
 require("dotenv").config();
 
+//---------file upload-----------
+
+const path = require('path');
+const fileRoute = require('./Routes/file');
+
+//-------------------------------
 
 const PORT = process.env.PORT || 8070;
 
@@ -31,6 +37,17 @@ mongoose.connect(URL, {
   connection.once("open", () => {
     console.log('_________MongoDB Connection Success____________')
   })
+
+  //---------------    --------------
+    app.use(express.static(path.join(__dirname, '..', 'build')));
+    app.use(fileRoute);
+
+    app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'));
+  });
+
+  //------------------------------------
+
 
 
   const journeyRouter = require("./Routes/journeys");

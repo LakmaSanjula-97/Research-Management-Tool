@@ -31,6 +31,8 @@ import AddResearchTopic from './Components/ResearchTopics/AddResearchTopic';
 import allresearchTopic from './Components/ResearchTopics/AllResearchTopic';
 import EditresearchTopic from './Components/ResearchTopics/EditResearchtopic';
 
+import FileUpload from './Components/FileUpload/FileUpload';
+import FilesList from './Components/FileUpload/FilesList';
 
 axios.defaults.withCredentials = true;
 
@@ -70,6 +72,12 @@ function App() {
           <Route path="/dashboard/AllResearchTopic" exact component={allresearchTopic} />
           <Route path="/dashboard/EditResearchTopic/:id" exact component={EditresearchTopic} />
 
+          {/* --------------- file ------------ */}
+
+          <Route path="/dashboard/fileupload" exact component={FileUpload}   />
+          <Route path="/dashboard/filelist" exact component={FilesList} />
+
+          {/* ------------------------------------------- */}
 
           <Route exact path="/register"><Register /></Route>
           <Route exact path="/"><Login /></Route>

@@ -65,11 +65,11 @@ function sidebar() {
 
 
                 <li data-toggle="collapse" data-target="#timetable" className="collapsed">
-                  <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; Timetable <span className="arrow"></span></a>
+                  <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp; Template <span className="arrow"></span></a>
                 </li>
                 <ul className="sub-menu collapse" id="timetable">
-                  <li><a href="/dashboard/addTimetable">Add Timetable</a></li>
-                  <li><a href="/dashboard/viewTimetable">All Timetables</a></li>
+                  <li><a href="/dashboard/fileupload">upload template</a></li>
+                  <li><a href="/dashboard/filelist">All Templates</a></li>
                 </ul>
 
                 <li data-toggle="collapse" data-target="#journey" className="collapsed">

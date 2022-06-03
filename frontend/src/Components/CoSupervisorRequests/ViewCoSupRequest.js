@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import '../SupervisorDetails/supervisor.css'
+import './cosupervisor.css'
 
 export default class ViewCoSupRequest extends Component {
 
@@ -29,19 +29,13 @@ export default class ViewCoSupRequest extends Component {
         })
     }
 
-    
-
-    addJourney(){
-        this.props.history.push('/admin/SupervisorView');
-    }
-
+ 
     searchSupervisorName(event){
         this.setState({ searchId: event.target.value.substr(0,
             20)});
     }
 
 
-    
 
     render(){
         
@@ -57,40 +51,35 @@ export default class ViewCoSupRequest extends Component {
             <div>
 
                 <div id="topic">
-                    <h2>Dashboard - Co-Supervisor Approval</h2>
-                    <hr id="hr"></hr>
+                    <br></br>
+                    <p id='topic-cosup'>Co-Supervisor Request Approval Status</p>
+                   
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by supervisor name" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="Search by Gropu Id" name="searchQuery" 
+                        style={{width:"10cm",height:'1cm', marginLeft:"27cm", marginTop:"1cm", borderRadius:"9px"}} 
+                        value={this.state.searchId} 
+                        onChange={this.searchSupervisorName.bind(this)} 
+                    />
             
                 </div>
-
+                <br></br>
                
-                <div id="table1">
+                <div id="table1CoSup">
 
                     <table id="journey_table" style={{textAlign:'center'}}>
                         <thead>
 
-                            <tr style={{'textAlign':'left'}}>
-                                <span >
-
-                                    <span id="text1">Approval</span>
-
-                                                          
-
-                                </span>
-                            </tr>
 
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Co-Supervisor Name</th>
-                                <th style={{'textAlign':'center'}}>Group Id</th>
-                                <th style={{'textAlign':'center'}}>Supervisor Name</th>
-                       
-                                <th style={{'textAlign':'center'}}>Approval Status</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Co-Supervisor Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Group Id</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Supervisor Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Approval Status</th>
                                 
                             </tr>
 
@@ -103,8 +92,7 @@ export default class ViewCoSupRequest extends Component {
                                      
                                     <td>{p.Cosupervisor_name}</td>
                                     <td>{p.groupId}</td>
-                                    <td>{p.supervisor_name}</td>
-                                    
+                                    <td>{p.supervisor_name}</td> 
                                     <td>{p.approval}</td>
                                     
 

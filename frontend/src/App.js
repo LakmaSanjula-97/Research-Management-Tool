@@ -100,8 +100,9 @@ function App() {
            <Route path="/dashboard/UpdatePanelMember/:id" exact component={UpdatePanelMember}/>
            <Route path="/dashboard/StudentViewPanelMember" exact component={StudentViewPanelMember}/>
 
+          {/* ---------------------co sup request----------------------- */}
 
-          <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} />
+          {/* <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} /> */}
           <Route path="/dashboard/AllCoSupervisor" exact component={allCoSupRequest} />
           <Route path="/dashboard/EditCoSupervisor/:id" exact component={EditCoSupRequest} />
           {/* <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} /> */}
@@ -133,8 +134,11 @@ function App() {
           <Route path="/studentHome"  component={StudentNav} />
           <Route path="/studentHome" exact component={StudentHome} />
 
-          {/* --------------------------------------------------- */}
+          {/* -----------------Student View---------------------------------- */}
           <Route path="/studentHome/ViewCoSupervisor" exact component={ViewCoSupRequest} />
+          <Route path="/studentHome/AddCoSupervisor" exact component={AddCoSupRequest} />
+
+
           <Route path="/studentHome/ViewSupervisor" exact component={ViewSupervisor} />
 
         </div>

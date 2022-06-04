@@ -94,13 +94,15 @@ export default class UpdatePanelMember extends Component {
 
             <div className ="form_journey">
 
-                <br></br>
-                <br></br>
-                <h2 id="headertext">
-                    Edit Supervisor Details
-                </h2>
+            <br></br>
+            <br></br>
+            <h2 id="headertext-Sup" style={{marginLeft:'15cm'}}>
+                Update Pannel Member Details
+            </h2>
+            <hr id="hr"></hr>
+            <br></br>
            
-                <form onSubmit={this.onSubmit}  id="form_journey">
+                <form onSubmit={this.onSubmit}  id="form_journey" style={{marginLeft:'14cm'}}>
 
                 <div className="row" required>
                         <label htmlFor="route">Research Topic</label>

@@ -112,15 +112,15 @@ export default class EditRequestSupervisor extends Component {
     render() {
         return(
 
-            <div className ="form_journey">
+            <div className ="form_journey" style={{marginLeft:'9cm'}}>
 
                 <br></br>
                 <br></br>
                 <h2 id="headertext">
-                    Edit Supervisor Details
+                    Edit Supervisor Request Details
                 </h2>
            
-                <form onSubmit={this.onSubmit}  id="form_journey">
+                <form onSubmit={this.onSubmit}  id="form_journey" style={{marginLeft:'6cm'}}>
 
                 <div className="row" required>
                         <label htmlFor="route">Research Topic</label>

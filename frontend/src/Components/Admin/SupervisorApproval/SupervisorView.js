@@ -67,15 +67,21 @@ export default class ViewSupervisorApproval extends Component {
         return (
             <div>
 
-                <div id="topic">
-                    <h2>Dashboard - Supervisor Approval</h2>
+<div>
+                    <br></br>
+                    <h2 id="headertext-Sup">
+                        Supervisor Approval Details
+                    </h2>
                     <hr id="hr"></hr>
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by supervisor name" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="search by supervisor name" name="searchQuery" 
+                    style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} 
+                    value={this.state.searchId} 
+                    onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
@@ -90,7 +96,7 @@ export default class ViewSupervisorApproval extends Component {
 
                                     <span id="text1">Approval</span>
 
-                                                          
+                                          <br></br>                
 
                                 </span>
                             </tr>
@@ -105,6 +111,7 @@ export default class ViewSupervisorApproval extends Component {
                                 <th style={{'textAlign':'center'}}>Request Message</th>
                                 <th style={{'textAlign':'center'}}>Date</th>
                                 <th style={{'textAlign':'center'}}>Approval</th>
+                                <th style={{'textAlign':'center'}}>Status</th>
                                 
                             </tr>
 
@@ -126,7 +133,7 @@ export default class ViewSupervisorApproval extends Component {
                                     
 
                                     <td>
-                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/EditRequestSupervisor/${p._id}`}>
+                                        <a className="btn btn-warning" style={{backgroundColor:'blue'}} id="btn10" href={`/dashboard/EditRequestSupervisor/${p._id}`} >
                                             <i class="fas fa-edit "></i>&nbsp;&nbsp;Edit
                                         </a>
                                       

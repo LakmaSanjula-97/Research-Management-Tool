@@ -180,13 +180,15 @@ export default class UpdateGroupId extends Component {
 
             <div className ="form_journey">
 
-                <br></br>
-                <br></br>
-                <h2 id="headertext">
-                    Update Group Id
-                </h2>
+            <br></br>
+            <br></br>
+            <h2 id="headertext-Sup">
+                Edit Group Id
+            </h2>
+            <hr id="hr"></hr>
+            <br></br>
            
-                <form onSubmit={this.onSubmit}  id="form_journey">
+                <form onSubmit={this.onSubmit}  id="form_journey" style={{'marginLeft':'15cm'}}>
 
 
 

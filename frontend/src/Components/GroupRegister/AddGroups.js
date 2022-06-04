@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import axios from "axios";
-
+import IMAGE8 from '../../Images/RMT9.jpg'
 import {useHistory} from 'react-router-dom';
 
 export default function AddGroups() {
-
 
     const [member1Name, setmember1Name] = useState("");
     const [member2Name, setmember2Name] = useState("");
@@ -69,16 +68,25 @@ export default function AddGroups() {
 
     return(
 
-        <div className ="form_journey">
+        <div className ="form_journey" style={{marginTop:'2cm'}}>
+            
 
+            <div id='st-sec10'>
+                <div class="topnav1" >
+                    
+                    <a href="/studentHome/ViewGroupDetails" style={{float:"right", marginTop:'0.5cm'}}>Reserch Groups</a>
+                    <a href="/studentHome/AddGroups" style={{float:"right", marginTop:'0.5cm'}}>Research Group Registration</a>
+             
+                </div>
+            </div>
             <br></br>
             <br></br>
             <h2 id="headertext">
-                Add Journey
+                Research Group Registration
             </h2>
 
             {/* add journey form */}
-            <form onSubmit={sendData}  id="form_journey">
+            <form onSubmit={sendData}  id="form_journey" style={{marginLeft:'4cm'}}>
 
 
                 <div className="row">
@@ -243,7 +251,9 @@ export default function AddGroups() {
                 <button type="submit"  id = "#">Add</button>
             </form>
 
-            
+            <div >
+                <img src={IMAGE8} id="imageL10"/>
+            </div>   
             
         </div>
     )

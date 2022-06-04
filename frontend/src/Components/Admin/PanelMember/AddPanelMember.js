@@ -52,12 +52,14 @@ export default function AddPanelMember() {
 
             <br></br>
             <br></br>
-            <h2 id="headertext">
-                Add Panel Member
+            <h2 id="headertext-Sup">
+                Add Panel Members
             </h2>
+            <hr id="hr"></hr>
+            <br></br>
 
             {/* add journey form */}
-            <form onSubmit={sendData}  id="form_journey">
+            <form onSubmit={sendData}  id="form_journey" style={{marginLeft:'14cm'}}>
 
 
                 <div className="row">

@@ -10,7 +10,7 @@ function sidebar() {
   
 
 <div className="nav-side-menu">
-    <div className="brand">TravelLanka
+    <div className="brand">RMT
     
     </div>
     <i className="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
@@ -19,22 +19,20 @@ function sidebar() {
   
             <ul id="menu-content" className="menu-content collapse out">
 
-            {/* <div>
-                <img src={Image1} id="image1"/>
-            </div> */}
-
+            
                <li>
                   <a href="#">
-                    <i class="fas fa-umbrella-beach fa-4x iconcolor"></i>
+                    
                     <div id="topicname">
-                      <span>TravelLanka</span>
+
+                      <span>Research Planner   2022</span>
     
                     </div>
                   </a>
                 </li>
 
 
-                {/* --------------------------------Dashboard-------------------------------------------------------- */}
+                {/* --------------------------------    Dashboard  ------------------------------------------------ */}
 
                 <li>
                   <a href="/dashboard">
@@ -45,20 +43,20 @@ function sidebar() {
 
                 {/* ---------------------------------Buses--------------------------------------------------------- */}
 
-                <li  data-toggle="collapse" data-target="#buses" className="collapsed">
-                  <a href="#"><i class="fa fa-bus" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; Supervisor <span className="arrow"></span></a>
+                <li  data-toggle="collapse" data-target="#Supervisor" className="collapsed">
+                  <a href="#"><i class="fas fa-users" aria-hidden="true"></i> &nbsp;&nbsp;&nbsp; Supervisor <span className="arrow"></span></a>
                 </li>
-                <ul className="sub-menu collapse" id="buses">
+                <ul className="sub-menu collapse" id="Supervisor">
                     <li><a href="/dashboard/AddSupervisor">Add Supervisor</a></li>
                     <li><a href="/dashboard/AllSupervisor">All Supervisor</a></li>
                     
                 </ul>
 
 
-                <li data-toggle="collapse" data-target="#routes" className="collapsed">
-                  <a href="#"><i class="fas fa-route"></i>&nbsp;&nbsp;&nbsp; Research Topic <span className="arrow"></span></a>
+                <li data-toggle="collapse" data-target="#researchtopics" className="collapsed">
+                  <a href="#"><i class="fa fa-search"></i>&nbsp;&nbsp;&nbsp; Research Topic <span className="arrow"></span></a>
                 </li>  
-                <ul className="sub-menu collapse" id="routes">
+                <ul className="sub-menu collapse" id="researchtopics">
                   <li><a href="/dashboard/AddResearchTopic">Add Research  Topic</a></li>
                   <li><a href="/dashboard/AllResearchTopic">All Research Topic</a></li>
                 </ul>

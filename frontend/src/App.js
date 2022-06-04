@@ -33,6 +33,8 @@ import ViewCoSupRequest from './Components/CoSupervisorRequests/ViewCoSupRequest
 
 import Home from './Components/Home/home';
 import StudentNav from './Components/StudentNav/studentNav';
+import StudentHome from './Components/StudentHome/studentHome';
+import ViewSupervisor from './Components/SupervisorDetails/ViewSupervisor';
 
 import ViewSupervisorApproval from './Components/Admin/SupervisorApproval/SupervisorView';
 import EditRequestSupervisor from './Components/Admin/SupervisorApproval/UpdateSupervisorApproval';
@@ -101,11 +103,12 @@ function App() {
            <Route path="/dashboard/UpdatePanelMember/:id" exact component={UpdatePanelMember}/>
            <Route path="/dashboard/StudentViewPanelMember" exact component={StudentViewPanelMember}/>
 
+          {/* ---------------------co sup request----------------------- */}
 
-          <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} />
+          {/* <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} /> */}
           <Route path="/dashboard/AllCoSupervisor" exact component={allCoSupRequest} />
           <Route path="/dashboard/EditCoSupervisor/:id" exact component={EditCoSupRequest} />
-          <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} />
+          {/* <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} /> */}
 
 
 
@@ -134,7 +137,15 @@ function App() {
           <Route exact path="/login"><Login /></Route>
 
           {/* --------------------------------------------------- */}
-          <Route path="/studentNav" exact component={StudentNav} />
+          <Route path="/studentHome"  component={StudentNav} />
+          <Route path="/studentHome" exact component={StudentHome} />
+
+          {/* -----------------Student View---------------------------------- */}
+          <Route path="/studentHome/ViewCoSupervisor" exact component={ViewCoSupRequest} />
+          <Route path="/studentHome/AddCoSupervisor" exact component={AddCoSupRequest} />
+
+
+          <Route path="/studentHome/ViewSupervisor" exact component={ViewSupervisor} />
 
         </div>
 

@@ -52,12 +52,12 @@ export default function AddCoSupRequest() {
 
     return(
 
-        <div className ="form_journey">
+        <div className ="form_journey" style={{marginTop:'2cm'}}>
 
             <br></br>
             <br></br>
             <h2 id="headertext">
-                Request for Co Supervisor
+                Request for Co-Supervisor
             </h2>
 
             {/* add journey form */}

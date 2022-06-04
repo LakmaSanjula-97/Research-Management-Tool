@@ -66,25 +66,26 @@ export default class allresearchTopic extends Component {
         return (
             <div>
 
-                <div id="topic">
-                    <h2>Dashboard - Manage Research Topic</h2>
+                <div>
+                    <br></br>
+                    <h2 id="headertext-Sup">
+                        Research Topic Details
+                    </h2>
                     <hr id="hr"></hr>
                 </div>
 
-                
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchGroupId.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" 
+                    style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} 
+                    value={this.state.searchId} 
+                    onChange={this.searchGroupId.bind(this)} />
             
                 </div>
 
-                <div>
-                    <a className="btn btn-warning" id="btn3" href="/dashboard/addJourney">
-                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Add Research Topic
-                    </a>
-                </div>
+                
 
-                <div id="table1">
+                <div id="table1" style={{marginLeft:'5cm'}}>
 
                     <table id="journey_table" style={{textAlign:'center'}}>
                         <thead>
@@ -111,6 +112,7 @@ export default class allresearchTopic extends Component {
                                 <th style={{'textAlign':'center'}}>Member 2</th>
                                 <th style={{'textAlign':'center'}}>Member 3</th>
                                 <th style={{'textAlign':'center'}}>Member 4</th>
+                                <th style={{'textAlign':'center'}}>Status</th>
                                 
                             </tr>
 

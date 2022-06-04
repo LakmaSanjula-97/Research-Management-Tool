@@ -66,7 +66,7 @@ function sidebar() {
                   <a href="#"><i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp; Supervisor Request <span className="arrow"></span></a>
                 </li>
                 <ul className="sub-menu collapse" id="journey">
-                  <li><a href="/dashboard/AddRequestSupervisor">Add Supervisor</a></li>
+                 
                   <li><a href="/dashboard/ViewSupervisorApproval">View Supervisor status</a></li>
                 </ul>
 
@@ -125,11 +125,7 @@ function sidebar() {
                 </ul>
 
 
-                <li>
-                  <a href="/dashboard/reportdashboard">
-                  <i class="fas fa-file-export"></i>&nbsp;&nbsp;&nbsp; Report
-                  </a>
-                </li>
+                
 
 
                 

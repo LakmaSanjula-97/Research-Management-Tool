@@ -67,45 +67,55 @@ export default class ViewSupervisorRequest extends Component {
 
 
         return (
-            <div>
+            <div style={{marginTop:'2cm'}}>
 
-                <div id="topic">
-                    <h2>Dashboard - View Supervisor Approval</h2>
-                    <hr id="hr"></hr>
+                <div id='st-sec10'>
+                    <div class="topnav1" >
+                        
+                        <a href="/studentHome/ViewCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Approval Status Co-Supervisor</a>
+                        <a href="/studentHome/ViewSupervisorRequest" style={{float:"right", marginTop:'0.5cm'}}>Approval Status Supervisor</a>
+                        <a href="/studentHome/AddCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Co-Supervisor</a>
+                        <a href="/studentHome/AddRequestSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Supervisor</a>
+                        <a href="/studentHome/ViewSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Supervisor Details</a>
+                        
+                
+                    </div>
+                </div>
+
+                <div id="topic" >
+                    
+                    <h2 id='topic-sup'>Supervisor Request Approval</h2>
+                    
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by GroupLeader" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="search by GroupLeader" name="searchQuery" 
+                    style={{width:"10cm",height:'1cm', marginLeft:"27cm", marginTop:"1cm", borderRadius:"9px"}} 
+                    value={this.state.searchId} 
+                    onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
                
-                <div id="table1">
+                <div id="table1Sup">
 
                     <table id="journey_table" style={{textAlign:'center'}}>
                         <thead>
 
-                            <tr style={{'textAlign':'left'}}>
-                                <span >
-
-                                    <span id="text1">Approval</span>
-
-                                                          
-
-                                </span>
-                            </tr>
+                            
 
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Research Topic</th>
-                                <th style={{'textAlign':'center'}}>Research Area</th>
-                                <th style={{'textAlign':'center'}}>Supervisor Name</th>
-                                <th style={{'textAlign':'center'}}>Group Leader</th>
-                                <th style={{'textAlign':'center'}}>Leader ITnumber</th>
-                                <th style={{'textAlign':'center'}}>Request Message</th>
-                                <th style={{'textAlign':'center'}}>Approval</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Research Topic</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Research Area</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Supervisor Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Group Leader</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Leader ITnumber</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Request Message</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Approval</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Ststus</th>
                                 
                             </tr>
 
@@ -129,7 +139,7 @@ export default class ViewSupervisorRequest extends Component {
                                         
                                       
                                     
-                                        <a className="btn btn-danger" id="btn2" onClick={() => this.deleteSupervisor(p._id)}>
+                                        <a className="btn btn-danger" id="btn10" onClick={() => this.deleteSupervisor(p._id)}>
                                             <i class="fa fa-trash blackiconcolor" aria-hidden="true"></i>&nbsp;&nbsp;Delete&nbsp;
                                         </a>
                                     </td>

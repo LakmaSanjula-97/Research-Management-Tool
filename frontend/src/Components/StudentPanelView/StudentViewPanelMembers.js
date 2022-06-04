@@ -65,43 +65,38 @@ export default class StudentViewPanelMember extends Component {
 
 
         return (
-            <div>
-
+            <div style={{marginTop:'2cm'}}>
+                
+                <br></br>
                 <div id="topic">
-                    <h2>Dashboard - Manage Panel Members</h2>
-                    <hr id="hr"></hr>
+                    <h2 id='topic-sup'>Panel Member Details</h2>
+                    
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by group id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" 
+                    placeholder="search by group id" name="searchQuery" 
+                    style={{width:"10cm",height:'1cm', marginLeft:"27cm", marginTop:"1cm", borderRadius:"9px"}}  
+                    value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
                
-                <div id="table1">
+                <div id="table1Sup">
 
                     <table id="journey_table" style={{textAlign:'center'}}>
                         <thead>
 
-                            <tr style={{'textAlign':'left'}}>
-                                <span >
-
-                                    <span id="text1">Panel_Members</span>
-
-                                                          
-
-                                </span>
-                            </tr>
-
+                            
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Group Id</th>
-                                <th style={{'textAlign':'center'}}>Panel Member 1</th>
-                                <th style={{'textAlign':'center'}}>Panel Member 2</th>
-                                <th style={{'textAlign':'center'}}>Panel Member 3</th>
-                                <th style={{'textAlign':'center'}}>Panel Member 4</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Group Id</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Panel Member 1</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Panel Member 2</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Panel Member 3</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Panel Member 4</th>
                                 
                             </tr>
 

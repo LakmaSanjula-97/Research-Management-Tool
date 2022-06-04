@@ -56,7 +56,7 @@ export default class ViewSupervisor extends Component {
                 <div class="topnav1" >
                     
                     <a href="/studentHome/ViewCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Approval Status Co-Supervisor</a>
-                    <a href="/studentHome/AddCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Status Supervisor</a>
+                    <a href="/studentHome/ViewSupervisorRequest" style={{float:"right", marginTop:'0.5cm'}}>Approval Status Supervisor</a>
                     <a href="/studentHome/AddCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Co-Supervisor</a>
                     <a href="/studentHome/AddRequestSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Supervisor</a>
                     <a href="/studentHome/ViewSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Supervisor Details</a>

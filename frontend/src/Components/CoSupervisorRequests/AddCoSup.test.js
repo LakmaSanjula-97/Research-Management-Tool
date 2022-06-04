@@ -13,6 +13,6 @@ describe("TextArea Component", () => {
     it("rendered input", () => {
         const { getByTestId } = render(<AddCoSupRequest/>);
         const textarea = getByTestId("testareadescription");
-        expect(textarea).toBeTruthy();
+        expect(textarea).toBeTruthy()
     })
 });

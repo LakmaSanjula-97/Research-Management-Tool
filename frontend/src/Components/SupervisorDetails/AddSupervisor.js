@@ -33,7 +33,7 @@ export default function AddSupervisor() {
 
         axios.post("http://localhost:8070/supervisor/add", newSupervisor).then(()=>{
             alert("Supervisor Added");
-            history.push('dashboard/AllSupervisor');
+            history.push('/dashboard/AllSupervisor');
 
             
         }).catch((err)=>{
@@ -50,12 +50,13 @@ export default function AddSupervisor() {
 
             <br></br>
             <br></br>
-            <h2 id="headertext">
-                Add Supervisor
+            <h2 id="headertext-Sup">
+                Add Supervisor Details
             </h2>
-
-            {/* add journey form */}
-            <form onSubmit={sendData}  id="form_journey">
+            <hr id="hr"></hr>
+            <br></br>
+            
+            <form onSubmit={sendData}  id="form_journey" style={{'marginLeft':'15cm'}}>
 
 
                 <div className="row">

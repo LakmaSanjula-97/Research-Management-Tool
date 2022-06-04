@@ -5,6 +5,6 @@ describe("Search Input Component", () => {
     it("rendered input", () => {
         const { getByTestId } = render(<GroupRegister/>);
         const input = getByTestId("searchbar");
-        expect(input).toBeTruthy();
+        expect(input).toBeTruthy()
     })
 });

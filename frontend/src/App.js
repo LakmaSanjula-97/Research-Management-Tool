@@ -54,6 +54,7 @@ import UpdatePanelMember from './Components/Admin/PanelMember/UpdatePanelMembers
 import StudentViewPanelMember from './Components/StudentPanelView/StudentViewPanelMembers';
 import DetailedresearchTopic from './Components/ResearchTopics/DetailedResearchTopic';
 import FinalizedresearchTopic from './Components/ResearchTopics/ResearchTopicSubmitGroups';
+import LandingHome from './Components/LandPage/landingpage';
 
 
 axios.defaults.withCredentials = true;
@@ -87,7 +88,7 @@ function App() {
           <Route path="/dashboard/ViewSupervisorApproval" exact component={ViewSupervisorApproval}/>
           <Route path="/dashboard/EditRequestSupervisor/:id" exact component={EditRequestSupervisor}/>
           {/* <Route path="/dashboard/AddRequestSupervisor" exact component={AddSupervisorRequest}/> */}
-          <Route path="/dashboard/ViewSupervisorRequest" exact component={ViewSupervisorRequest}/>
+          {/* <Route path="/dashboard/ViewSupervisorRequest" exact component={ViewSupervisorRequest}/> */}
 
 
           {/*---------------- Add groups -----------------*/}
@@ -100,7 +101,7 @@ function App() {
            <Route path="/dashboard/AddPanelMember" exact component={AddPanelMember}/>
            <Route path="/dashboard/ViewPanelMember" exact component={ViewPanelMember}/>
            <Route path="/dashboard/UpdatePanelMember/:id" exact component={UpdatePanelMember}/>
-           <Route path="/dashboard/StudentViewPanelMember" exact component={StudentViewPanelMember}/>
+           {/* <Route path="/dashboard/StudentViewPanelMember" exact component={StudentViewPanelMember}/> */}
 
           {/* ---------------------co sup request----------------------- */}
 
@@ -146,11 +147,16 @@ function App() {
 
           <Route path="/studentHome/ViewSupervisor" exact component={ViewSupervisor} />
 
+          <Route path="/studentHome/LandingHome" exact component={LandingHome} />
+
           {/* --- */}
           <Route path="/studentHome/AddRequestSupervisor" exact component={AddSupervisorRequest}/>
 
           <Route path="/studentHome/AddGroups" exact component={AddGroups}/>
           <Route path="/studentHome/ViewGroupDetails" exact component={ViewGroupDetails}/>
+          <Route path="/studentHome/ViewSupervisorRequest" exact component={ViewSupervisorRequest}/>
+
+          <Route path="/studentHome/StudentViewPanelMember" exact component={StudentViewPanelMember}/>
 
         </div>
 

@@ -105,7 +105,7 @@ function App() {
 
           {/* ---------------------co sup request----------------------- */}
 
-          {/* <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} /> */}
+          <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} />
           <Route path="/dashboard/AllCoSupervisor" exact component={allCoSupRequest} />
           <Route path="/dashboard/EditCoSupervisor/:id" exact component={EditCoSupRequest} />
           {/* <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} /> */}

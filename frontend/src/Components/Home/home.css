@@ -49,9 +49,9 @@
     margin-top: 1cm;
 }
 
-/* #image1{
-    height: 10cm;
-} */
+#ldsec5{
+  margin-top: -13cm;
+}
 
 .image-banner{
     width: 100%;
@@ -148,4 +148,30 @@
       margin-top: -11cm;
 
   }
+
+  .imageH1{
+    width: 3.5cm;
+    height: 4cm;
+  }
+
+  #sec6{
+    margin-top: -11cm;
+    margin-left: 35cm;
+
+}
+#sec7{
+  margin-top: 12cm;
+  width: 35cm;
+  border: 1px solid rgb(255, 255, 255);
+  margin-left: 4cm;
+ 
+}
+
+#homedes{
+  color: #414141;
+  width: 30cm;
+  height: 5cm;
+  font-size: 20px;
+  font-style: italic;
+}
 

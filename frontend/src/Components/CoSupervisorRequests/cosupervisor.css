@@ -286,6 +286,17 @@
     margin-left: 10px;
     margin-top: -10px;
   }
+
+  #btn10{
+    width: 100px;
+    height: 33px;
+    background-color: rgb(255, 8, 8);
+    
+    border-radius: 50px 50px 50px 50px;
+    color: white;
+    margin-left: 10px;
+    margin-top: -1px;
+  }
   
   #btn8:hover {
     background-color: rgb(219, 160, 32);

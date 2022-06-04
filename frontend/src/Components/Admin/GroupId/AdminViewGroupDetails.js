@@ -66,20 +66,26 @@ export default class AdminViewGroupDetails extends Component {
         return (
             <div>
 
-                <div id="topic">
-                    <h2>Dashboard - Manage Group Details</h2>
+                <div>
+                    <br></br>
+                    <h2 id="headertext-Sup">
+                        Manage Group Details
+                    </h2>
                     <hr id="hr"></hr>
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by leader name" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" 
+                    placeholder="search by leader name" name="searchQuery" 
+                    style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}}  
+                    value={this.state.searchId} 
+                    onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
                 
-
                 <div id="table1" >
 
                     <table id="journey_table" style={{textAlign:'center'}}>
@@ -88,10 +94,10 @@ export default class AdminViewGroupDetails extends Component {
                             <tr style={{'textAlign':'left'}}>
                                 <span >
 
-                                    <span id="text1">Add_GroupID</span>
+                                    <span id="text1">Group_Details</span>
 
                                                           
-
+                                    <br></br>
                                 </span>
                             </tr>
 
@@ -106,6 +112,7 @@ export default class AdminViewGroupDetails extends Component {
                                 <th style={{'textAlign':'center'}}>Member4 Name</th>
                                 <th style={{'textAlign':'center'}}>Member4 IT No</th>
                                 <th style={{'textAlign':'center'}}>Group ID</th>
+                                <th style={{'textAlign':'center'}}>Status</th>
                                 
                             </tr>
 
@@ -127,7 +134,7 @@ export default class AdminViewGroupDetails extends Component {
                                     <td>{p.GroupID}</td>
 
                                     <td>
-                                    <a className="btn btn-warning" id="btn1" href={`/dashboard/UpdateGroupId/${p._id}`}>
+                                    <a className="btn btn-warning" id="btn9" href={`/dashboard/UpdateGroupId/${p._id}`}>
                                             <i class="fas fa-edit "></i>&nbsp;&nbsp;Edit
                                         </a>
                                         

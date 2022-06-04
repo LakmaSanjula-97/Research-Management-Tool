@@ -48,10 +48,23 @@ export default class ViewCoSupRequest extends Component {
 
 
         return (
-            <div>
+            <div style={{marginTop:'2cm'}}>
+
+            <div id='st-sec10'>
+                <div class="topnav1" >
+                    
+                    <a href="/studentHome/ViewCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Approval Status Co-Supervisor</a>
+                    <a href="/studentHome/AddCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Status Supervisor</a>
+                    <a href="/studentHome/AddCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Co-Supervisor</a>
+                    <a href="/studentHome/AddRequestSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Supervisor</a>
+                    <a href="/studentHome/ViewSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Supervisor Details</a>
+                    
+             
+                </div>
+            </div>
 
                 <div id="topic">
-                    <br></br>
+                    
                     <p id='topic-cosup'>Co-Supervisor Request Approval Status</p>
                    
                 </div>

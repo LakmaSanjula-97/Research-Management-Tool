@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
+
 export default class ViewGroupDetails extends Component {
 
     constructor(props){
@@ -64,23 +65,35 @@ export default class ViewGroupDetails extends Component {
 
 
         return (
-            <div>
+            <div style={{marginTop:'2cm'}}>
 
-                <div id="topic">
-                    <h2>Dashboard - Manage Group Details</h2>
-                    <hr id="hr"></hr>
+            <div id='st-sec10'>
+                <div class="topnav1" >
+                    
+                    <a href="/studentHome/ViewGroupDetails" style={{float:"right", marginTop:'0.5cm'}}>Reserch Groups</a>
+                    <a href="/studentHome/AddGroups" style={{float:"right", marginTop:'0.5cm'}}>Research Group Registration</a>
+             
+                </div>
+            </div>
+
+                <div id="topic" >
+                    
+                    <h2 id='topic-sup'>Research Group Details</h2>
+                    
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" 
+                    style={{width:"10cm",height:'1cm', marginLeft:"27cm", marginTop:"1cm", borderRadius:"9px"}} 
+                    value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
                 
 
-                <div id="table1" >
+                <div id="table1Sup" >
 
                     <table id="journey_table" style={{textAlign:'center'}}>
                         <thead>
@@ -90,22 +103,22 @@ export default class ViewGroupDetails extends Component {
 
                                     <span id="text1">GroupDetails</span>
 
-                                                          
+                                         <br></br>                 
 
                                 </span>
                             </tr>
 
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Leader Name</th>
-                                <th style={{'textAlign':'center'}}>Leader IT No</th>
-                                <th style={{'textAlign':'center'}}>Member2 Name</th>
-                                <th style={{'textAlign':'center'}}>Member2 IT No</th>
-                                <th style={{'textAlign':'center'}}>Member3 Name</th>
-                                <th style={{'textAlign':'center'}}>Member3 IT No</th>
-                                <th style={{'textAlign':'center'}}>Member4 Name</th>
-                                <th style={{'textAlign':'center'}}>Member4 IT No</th>
-                                <th style={{'textAlign':'center'}}>Group ID</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Leader Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Leader IT No</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Member2 Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Member2 IT No</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Member3 Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Member3 IT No</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Member4 Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Member4 IT No</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Group ID</th>
                                 
                             </tr>
 
@@ -125,15 +138,6 @@ export default class ViewGroupDetails extends Component {
                                     <td>{p.member4Name}</td>
                                     <td>{p.member4ITnumber}</td>
                                     <td>{p.GroupID}</td>
-
-                                    <td>
-                                        
-                                      
-                                    
-                                        <a className="btn btn-danger" id="btn2" onClick={() => this.deleteSupervisor(p._id)}>
-                                            <i class="fa fa-trash blackiconcolor" aria-hidden="true"></i>&nbsp;&nbsp;Delete&nbsp;
-                                        </a>
-                                    </td>
 
 
                                 </tr>

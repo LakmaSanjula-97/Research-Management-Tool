@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
-
+import IMAGE7 from '../../Images/RMT7.jpg'
 import {useHistory} from 'react-router-dom';
 import '../SupervisorDetails/supervisor.css'
 
@@ -39,7 +39,7 @@ export default function AddCoSupRequest() {
 
         axios.post("http://localhost:8070/coSupRequset/add", newCoSupRequest).then(()=>{
             alert("Co Supervisor Request Added");
-            history.push('/dashboard/AllCoSupervisor');
+            // history.push('/dashboard/AllCoSupervisor');
 
             
         }).catch((err)=>{
@@ -54,14 +54,23 @@ export default function AddCoSupRequest() {
 
         <div className ="form_journey" style={{marginTop:'2cm'}}>
 
+            <div id='st-sec10'>
+                <div class="topnav1" >
+                    
+                    <a href="/studentHome/AddCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Co-Supervisor</a>
+                    <a href="/studentHome/AddRequestSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Supervisor</a>
+                    <a href="/studentHome/ViewSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Supervisor Details</a>
+                    
+             
+                </div>
+            </div>
             <br></br>
-            <br></br>
-            <h2 id="headertext">
+            <h2 id="headertext1">
                 Request for Co-Supervisor
             </h2>
 
             {/* add journey form */}
-            <form onSubmit={sendData}  id="form_journey">
+            <form onSubmit={sendData}  id="form_journey" style={{marginLeft:'4cm'}}>
 
 
                 <div className="row">
@@ -135,6 +144,10 @@ export default function AddCoSupRequest() {
 
                 <button type="submit"  id = "#">Add</button>
             </form>
+
+            <div >
+                <img src={IMAGE7} id="imageL7"/>
+            </div>
 
             
             

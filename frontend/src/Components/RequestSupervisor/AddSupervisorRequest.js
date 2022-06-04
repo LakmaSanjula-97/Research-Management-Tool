@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
-
+import IMAGE7 from '../../Images/RMT6.jpg'
 import {useHistory} from 'react-router-dom';
 
 export default function AddSupervisorRequest() {
@@ -52,16 +52,27 @@ export default function AddSupervisorRequest() {
 
     return(
 
-        <div className ="form_journey">
+        <div className ="form_journey" style={{marginTop:'2cm'}}>
 
+            <div id='st-sec10'>
+                <div class="topnav1" >
+                    
+                    <a href="/studentHome/AddCoSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Co-Supervisor</a>
+                    <a href="/studentHome/AddRequestSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Request Supervisor</a>
+                    <a href="/studentHome/ViewSupervisor" style={{float:"right", marginTop:'0.5cm'}}>Supervisor Details</a>
+                    
+             
+                </div>
+            </div>
+
+            
             <br></br>
-            <br></br>
-            <h2 id="headertext">
-                Add Supervisor Request
+            <h2 id="headertext1">
+            Add Supervisor Request
             </h2>
 
             {/* add journey form */}
-            <form onSubmit={sendData}  id="form_journey">
+            <form onSubmit={sendData}  id="form_journey" style={{marginLeft:'4cm'}}>
 
 
                 <div className="row">
@@ -177,7 +188,9 @@ export default function AddSupervisorRequest() {
                 <button type="submit"  id = "#">Add</button>
             </form>
 
-            
+            <div >
+                <img src={IMAGE7} id="imageL9"/>
+            </div>
             
         </div>
     )

@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-
-
 export default class ViewPanelMember extends Component {
 
     constructor(props){
@@ -67,15 +65,21 @@ export default class ViewPanelMember extends Component {
         return (
             <div>
 
-                <div id="topic">
-                    <h2>Dashboard - Manage Panel Members</h2>
+                <div>
+                    <br></br>
+                    <h2 id="headertext-Sup" style={{marginLeft:'17cm'}}>
+                        Manage Panel Members
+                    </h2>
                     <hr id="hr"></hr>
                 </div>
-
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by group id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" 
+                    placeholder="search by group id" name="searchQuery" 
+                    style={{width:"8cm", marginLeft:"29.5cm", marginTop:"1cm", borderRadius:"9px"}} 
+                    value={this.state.searchId} 
+                    onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
@@ -87,7 +91,7 @@ export default class ViewPanelMember extends Component {
 
                             <tr style={{'textAlign':'left'}}>
                                 <span >
-
+                                    <br></br>
                                     <span id="text1">Panel_Members</span>
 
                                                           
@@ -102,6 +106,7 @@ export default class ViewPanelMember extends Component {
                                 <th style={{'textAlign':'center'}}>Panel Member 2</th>
                                 <th style={{'textAlign':'center'}}>Panel Member 3</th>
                                 <th style={{'textAlign':'center'}}>Panel Member 4</th>
+                                <th style={{'textAlign':'center'}}>Status</th>
                                 
                             </tr>
 
@@ -120,12 +125,12 @@ export default class ViewPanelMember extends Component {
                                     
 
                                     <td>
-                                        <a className="btn btn-warning" id="btn1" href={`/dashboard/UpdatePanelMember/${p._id}`}>
+                                        <a className="btn btn-warning" id="btn6" href={`/dashboard/UpdatePanelMember/${p._id}`}>
                                             <i class="fas fa-edit "></i>&nbsp;&nbsp;Edit
                                         </a>
                                       
                                     
-                                        <a className="btn btn-danger" id="btn2" onClick={() => this.deleteSupervisor(p._id)}>
+                                        <a className="btn btn-danger" id="btn7" onClick={() => this.deleteSupervisor(p._id)}>
                                             <i class="fa fa-trash blackiconcolor" aria-hidden="true"></i>&nbsp;&nbsp;Delete&nbsp;
                                         </a>
                                     </td>

@@ -55,7 +55,7 @@ export default class Home extends Component {
 
             <section id='sec5'>
                 <div>
-                    <h1 id='text-home1'>xxxxxxxxxxxxxxxxxx -2022</h1>
+                    <h1 id='text-home1'>Research Planner -2022</h1>
                 </div>
                 
             </section>

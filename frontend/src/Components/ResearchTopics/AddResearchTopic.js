@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
-
+import IMAGE8 from '../../Images/RMT8.jpg'
 import {useHistory} from 'react-router-dom';
 
 export default function AddResearchTopic() {
@@ -60,16 +60,25 @@ export default function AddResearchTopic() {
 
     return(
 
-        <div className ="form_journey">
+        <div className ="form_journey" style={{marginTop:'2cm'}}>
+
+            <div id='st-sec10'>
+                <div class="topnav1" >
+                    
+                    <a href="/studentHome/FinalResearchTopic" style={{float:"right", marginTop:'0.5cm'}}>Topic Submitted Groups</a>
+                    <a href="/studentHome/AddResearchTopic" style={{float:"right", marginTop:'0.5cm'}}>Submit Research Topics</a>
+                    
+             
+                </div>
+            </div>
 
             <br></br>
-            <br></br>
-            <h2 id="headertext">
+            <h2 id="headertext1">
                 Add Research Topic
             </h2>
 
             {/* add journey form */}
-            <form onSubmit={sendData}  id="form_journey">
+            <form onSubmit={sendData}  id="form_journey" style={{marginLeft:'4cm'}}>
 
 
                 <div className="row">
@@ -182,11 +191,14 @@ export default function AddResearchTopic() {
 
 
                   
-                
+                <button type="reset"  id = "#">Reset</button>
 
                 <button type="submit"  id = "#">Add</button>
             </form>
 
+            <div >
+                <img src={IMAGE8} id="imageL8"/>
+            </div>
             
             
         </div>

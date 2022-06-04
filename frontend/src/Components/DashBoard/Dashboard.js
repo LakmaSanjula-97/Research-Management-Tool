@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import studentRegistration from '../../Images/image1.png'
+import studentRegistration1 from '../../Images/image2.png'
+import studentRegistration2 from '../../Images/image3.png'
 
 import '../../Styles/Dashboard.css'
 
@@ -41,10 +44,12 @@ export default class Dashboard extends Component {
                <div>
                    <button id="dash_btn1">
 
-                        <i class="fas fa-bus fa-5x imgcolor1"></i>
+                        {/* <i class="fa-solid fa-person-circle-check imgcolor1"></i> */}
+
+                        <img  className="image" src={studentRegistration1} alt="60" style={{width:'150px'}}/>
                 
-                        <a className="btn btn-warning" id="dash_link1" href="#">
-                            Buses
+                        <a className="btn btn-warning" id="dash_link1" href="/dashboard/ViewSupervisorApproval">
+                            Supervisor Request
                         </a>
                        
                     </button>
@@ -53,10 +58,12 @@ export default class Dashboard extends Component {
                <div>
                    <button id="dash_btn2">
 
-                        <i class="fas fa-route fa-5x imgcolor2"></i>
+                   <img  className="image" src={studentRegistration} alt="60" style={{width:'160px'}}/>
+
+                        {/* <i class="fa-solid fa-person-circle-check imgcolor2"></i> */}
                 
-                        <a className="btn btn-warning" id="dash_link2" href="/dashboard/viewBusroute">
-                            Routes
+                        <a className="btn btn-warning" id="dash_link2" href="/dashboard/AllCoSupervisor">
+                            Co-Supervisor Request
                         </a>
                        
                     </button>
@@ -65,10 +72,10 @@ export default class Dashboard extends Component {
                <div>
                    <button id="dash_btn3">
 
-                        <i class="fas fa-address-card fa-5x imgcolor3"></i>
+                   <img  className="image" src={studentRegistration2} alt="60" style={{width:'110px'}}/>
                 
-                        <a className="btn btn-warning" id="dash_link3" href="#">
-                            Tokens
+                        <a className="btn btn-warning" id="dash_link3" href="/dashboard/AddPanelMember">
+                            Manage Panel Members
                         </a>
                        
                     </button>
@@ -77,47 +84,7 @@ export default class Dashboard extends Component {
                 
                 <div id="table1" style={{marginTop:'2cm'}}>
                 
-                    <table  id="viewtable" style={{textAlign:'center'}} className="report_busroute_table">
-                        <thead>
-
-                            <tr style={{'textAlign':'left'}}>
-
-                                <span >
-
-                                    <span id="text1">Routes</span>
-                                                        
-
-                                </span>
-                            </tr>
-
-                            <tr id="reporthead1">
-
-                               
-                                <th style={{'textAlign':'center', width:'3cm','backgroundColor':'whitesmoke',color:'black'}}>Route</th>
-                                <th style={{'textAlign':'center','backgroundColor':'whitesmoke',color:'black'}}>Bus Number</th>
-                                <th style={{'textAlign':'center','backgroundColor':'whitesmoke',color:'black'}}>Route From</th>
-                                <th style={{'textAlign':'center','backgroundColor':'whitesmoke',color:'black'}}>Route To</th>
-                                <th style={{'textAlign':'center','backgroundColor':'whitesmoke',color:'black'}}>Cost</th>
-                            
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-                            {this.state.busroutes.map((p, index)=>{
-                                return <tr key={index}>
-                                          
-                                    <td>{p.route_name}</td>
-                                    <td>{p.bus_no}</td>
-                                    <td>{p.route_from}</td>
-                                    <td>{p.route_to}</td>
-                                    <td>{p.cost}</td>
-
-                                </tr>
-                            })}
-                        </tbody>
-
-                    </table>
+  
                 </div>
             </div>
         );

@@ -3,7 +3,7 @@
     margin-top: 1.5cm;
     width: 6cm;
     height: 3cm;
-    border: 1px solid rgb(255, 51, 51);
+    border: 1px solid rgb(77, 121, 255);
     box-shadow: 5px 10px #e7e7e7;
     border-radius: 9px;
     background-color: white;
@@ -19,9 +19,9 @@
     width: 6cm;
     margin-top: 0.2cm;
     margin-left: -8px;
-    background-color: rgb(255, 51, 51);
+    background-color: rgb(77, 121, 255);
     border-radius: 50px 50px 50px 50px;
-    border-color: rgb(255, 51, 51);
+    border-color: rgb(77, 121, 255);
 
 }
 
@@ -31,14 +31,14 @@
     position: absolute;
     width: 6cm;
     height: 3cm;
-    border: 1px solid rgb(255, 153, 0);
+    border: 1px solid rgb(77, 121, 255);
     box-shadow: 5px 10px #e7e7e7;
     border-radius: 9px;
     background-color: white;
 }
 
 .imgcolor2{
-    color: rgb(255, 153, 0);
+    color: rgb(77, 121, 255);
     margin-top: 10px;
 }
 #dash_link2{
@@ -47,7 +47,7 @@
     width: 6cm;
     margin-top: 0.2cm;
     margin-left: -8px;
-    background-color: rgb(255, 153, 0);
+    background-color: rgb(77, 121, 255);
     border-radius: 50px 50px 50px 50px;
 
 }

@@ -85,9 +85,11 @@ export default class ViewGroupDetails extends Component {
                 
                 <div>
 
+
                     <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" 
                     style={{width:"10cm",height:'1cm', marginLeft:"27cm", marginTop:"1cm", borderRadius:"9px"}} 
                     value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+
             
                 </div>
 

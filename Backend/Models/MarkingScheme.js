@@ -31,7 +31,7 @@ const markingSchema = new Schema({
 })
 
 //mongodb data table name
-const Marking = mongoose.model("Marking", swapnaSchema);
+const Marking = mongoose.model("Marking", markingSchema);
 
 //export the module
 module.exports = Marking;

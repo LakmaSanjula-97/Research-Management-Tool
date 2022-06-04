@@ -57,6 +57,9 @@ import FinalizedresearchTopic from './Components/ResearchTopics/ResearchTopicSub
 import LandingHome from './Components/LandPage/landingpage';
 
 
+import AddMarkingScheme from './Components/Admin/MarkingScheme/AddMarkingScheme';
+
+
 axios.defaults.withCredentials = true;
 
 function App() {
@@ -105,7 +108,7 @@ function App() {
 
           {/* ---------------------co sup request----------------------- */}
 
-          {/* <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} /> */}
+          <Route path="/dashboard/AddCoSupervisor" exact component={AddCoSupRequest} />
           <Route path="/dashboard/AllCoSupervisor" exact component={allCoSupRequest} />
           <Route path="/dashboard/EditCoSupervisor/:id" exact component={EditCoSupRequest} />
           {/* <Route path="/dashboard/ViewCoSupervisor" exact component={ViewCoSupRequest} /> */}
@@ -128,6 +131,9 @@ function App() {
           <Route path="/dashboard/submitfilelist" exact component={SubmitList} />
 
           {/* ------------------------------------------- */}
+
+          <Route path="/dashboard/AddMarkingScheme" exact component={AddMarkingScheme}/>
+
 
           
           <Route path="/" exact component={Home} />

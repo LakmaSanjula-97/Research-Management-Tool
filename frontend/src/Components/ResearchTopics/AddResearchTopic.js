@@ -173,7 +173,7 @@ export default function AddResearchTopic() {
 
                 {/* <div className="row">
                     <label htmlFor="to">Co-Supervisor Name</label>
-                    <input type="text" className="form-control" id="co_supervisor_name" placeholder="" required
+                    <input type="text" data-testid="coname" className="form-control" id="co_supervisor_name" placeholder="" required
                      onChange = {(e) => {
                         setco_supervisor_name(e.target.value);
                     }}

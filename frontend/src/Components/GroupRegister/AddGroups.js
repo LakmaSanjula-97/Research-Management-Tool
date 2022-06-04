@@ -55,7 +55,7 @@ export default function AddGroups() {
 
         axios.post("http://localhost:8070/groupdetail/add", newSupervisor).then(()=>{
             alert("Supervisor Added");
-            history.push('/dashboard/viewSupervisorRequest');
+            // history.push('/dashboard/viewSupervisorRequest');
 
             
         }).catch((err)=>{

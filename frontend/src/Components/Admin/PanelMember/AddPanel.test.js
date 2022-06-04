@@ -13,7 +13,7 @@ describe("Reset Button Component", () => {
     it("rendered button", () => {
         const { getByTestId } = render(<AddPanelMember/>);
         const button = getByTestId("buttonreset");
-        expect(button).toBeTruthy();
+        expect(button).toBeTruthy()
     });
 });
 

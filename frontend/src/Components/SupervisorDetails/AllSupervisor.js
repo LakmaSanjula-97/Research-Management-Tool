@@ -67,21 +67,27 @@ export default class allSupervisor extends Component {
         return (
             <div>
 
-                <div id="topic">
-                    <h2>Dashboard - View Request Supervisor</h2>
+                <div>
+                    <br></br>
+                    <h2 id="headertext-Sup">
+                        Supervisor Details
+                    </h2>
                     <hr id="hr"></hr>
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="Search by Supervisor Name" name="searchQuery" 
+                    style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} 
+                    value={this.state.searchId} 
+                    onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
                 <div>
-                    <a className="btn btn-warning" id="btn3" href="/dashboard/addJourney">
-                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Add Supervisor
+                    <a className="btn btn-warning" id="btn3" href="/dashboard/AddSupervisor" style={{width:'4cm'}}>
+                        <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add Supervisor
                     </a>
                 </div>
 
@@ -91,15 +97,13 @@ export default class allSupervisor extends Component {
                         <thead>
 
                             <tr style={{'textAlign':'left'}}>
+                                <br></br>
                                 <span >
 
-                                    <span id="text1">Supervisor</span>
-
-
-                                                             
-
-
+                                    <span id="text1">Supervisor Details</span><br></br>
+                                    
                                 </span>
+                                
                             </tr>
 
                             <tr>
@@ -108,6 +112,7 @@ export default class allSupervisor extends Component {
                                 <th style={{'textAlign':'center'}}>Email</th>
                                 <th style={{'textAlign':'center'}}>Department</th>
                                 <th style={{'textAlign':'center'}}>Research Area</th>
+                                <th style={{'textAlign':'center'}}>Status</th>
                                 
                             </tr>
 

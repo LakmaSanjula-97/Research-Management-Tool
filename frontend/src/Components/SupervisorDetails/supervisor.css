@@ -4,11 +4,35 @@
     font-weight: 700;
     margin-left: 8cm;
 }
+
+#headertext-Sup{
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  margin-left: 18cm;
+  margin-top: 1.5cm;
+}
+
+
 #form_journey{
     border: solid rgb(207, 205, 205) 1px;
     padding: 10px 50px 30px 50px;
     margin-top: 1cm;
     margin-left: 9cm;
+}
+
+#topic-sup{
+  margin-top: 0cm;
+  margin-left: 7cm;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+#table1Sup{
+  margin-left: 4cm;
+  margin-top: 0.5cm;
+  
 }
 
 

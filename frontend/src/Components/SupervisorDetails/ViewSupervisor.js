@@ -53,40 +53,33 @@ export default class ViewSupervisor extends Component {
             <div>
 
                 <div id="topic">
-                    <h2>Supervisor Details</h2>
-                    <hr id="hr"></hr>
+                    <h2 id='topic-sup'>Supervisor Details</h2>
+                    
                 </div>
 
                 
                 <div>
 
-                    <input className="form-control" type = "search" placeholder="search by passenger id" name="searchQuery" style={{width:"7cm", marginLeft:"10cm", marginTop:"1cm", borderRadius:"9px"}} value={this.state.searchId} onChange={this.searchSupervisorName.bind(this)} />
+                    <input className="form-control" type = "search" placeholder="Search by Supervisor Name" name="searchQuery" 
+                        style={{width:"10cm",height:'1cm', marginLeft:"27cm", marginTop:"1cm", borderRadius:"9px"}} 
+                        value={this.state.searchId} 
+                        onChange={this.searchSupervisorName.bind(this)} />
             
                 </div>
 
-                
+                <br></br>
 
-                <div id="table1">
+                <div id="table1Sup">
 
                     <table id="journey_table" style={{textAlign:'center'}}>
                         <thead>
 
-                            <tr style={{'textAlign':'left'}}>
-                                <span >
-
-                                    <span id="text1">Supervisor</span>
-
-                                                             
-
-                                </span>
-                            </tr>
-
                             <tr>
 
-                                <th style={{'textAlign':'center'}}>Name</th>
-                                <th style={{'textAlign':'center'}}>Email</th>
-                                <th style={{'textAlign':'center'}}>Department</th>
-                                <th style={{'textAlign':'center'}}>Research Area</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Supervisor Name</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Email Address</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Department</th>
+                                <th style={{'textAlign':'center', 'backgroundColor':'#051931',color:'white'}}>Research Area</th>
                                 
                             </tr>
 

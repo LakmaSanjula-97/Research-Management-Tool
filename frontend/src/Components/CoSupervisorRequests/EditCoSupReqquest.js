@@ -197,7 +197,7 @@ export default class EditCoSupRequest extends Component {
 
                     
                     
-                    <button type="submit">Update</button>
+                    <button type="submit" >Update</button>
                     <br/><br/>
 
                 </form>

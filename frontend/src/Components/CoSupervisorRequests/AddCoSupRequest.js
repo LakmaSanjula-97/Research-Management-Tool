@@ -102,7 +102,7 @@ export default function AddCoSupRequest() {
 
                 <div className="row">
                     <label htmlFor="to">Research Area</label>
-                    <input type="text" className="form-control" id="research_area" placeholder="" required
+                    <input type="text" data-testid="inputresearcharea" className="form-control" id="research_area" placeholder="" required
                      onChange = {(e) => {
                         setresearch_area(e.target.value);
                     }}
@@ -111,7 +111,7 @@ export default function AddCoSupRequest() {
 
                 <div className="row">
                     <label htmlFor="to">Description</label>
-                    <textarea rows="4" cols="50" className="form-control" id="description" placeholder="" required
+                    <textarea rows="4" cols="50" data-testid="testareadescription" className="form-control" id="description" placeholder="" required
                      onChange = {(e) => {
                         setdescription(e.target.value);
                     }}

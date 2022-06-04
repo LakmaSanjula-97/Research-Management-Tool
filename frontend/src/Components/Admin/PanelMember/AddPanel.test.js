@@ -22,6 +22,6 @@ describe("Input Component", () => {
         const { getByTestId } = render(<AddPanelMember/>);
         const input = getByTestId("groupidtest");
         expect(input).toBeTruthy();
-    });
+    })
 });
 

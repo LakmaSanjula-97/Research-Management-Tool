@@ -87,13 +87,15 @@ export default class EditSupervisor extends Component {
 
             <div className ="form_journey">
 
-                <br></br>
-                <br></br>
-                <h2 id="headertext">
-                    Edit Supervisor Details
-                </h2>
+            <br></br>
+            <br></br>
+            <h2 id="headertext-Sup">
+                Edit Supervisor Details
+            </h2>
+            <hr id="hr"></hr>
+            <br></br>
            
-                <form onSubmit={this.onSubmit}  id="form_journey">
+                <form onSubmit={this.onSubmit}  id="form_journey"  style={{'marginLeft':'15cm'}}>
 
 
                     <div className="row" required>
@@ -130,10 +132,8 @@ export default class EditSupervisor extends Component {
                     </div>
 
 
-                    
-                    <button type="reset"  id = "#">Reset</button>
 
-                    <button type="submit">Edit</button>
+                    <button type="submit" style={{'marginLeft':'5.5cm'}}>Edit</button>
                     <br/><br/>
 
                 </form>

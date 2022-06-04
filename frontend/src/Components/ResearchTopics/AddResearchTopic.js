@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
-
+import IMAGE8 from '../../Images/RMT8.jpg'
 import {useHistory} from 'react-router-dom';
 
 export default function AddResearchTopic() {
@@ -47,7 +47,7 @@ export default function AddResearchTopic() {
 
         axios.post("http://localhost:8070/researchTopic/add", newResearchTopic).then(()=>{
             alert("Research Topic Added");
-            history.push('/dashboard/AllResearchTopic');
+            // history.push('/dashboard/AllResearchTopic');
 
             
         }).catch((err)=>{
@@ -60,16 +60,25 @@ export default function AddResearchTopic() {
 
     return(
 
-        <div className ="form_journey">
+        <div className ="form_journey" style={{marginTop:'2cm'}}>
+
+            <div id='st-sec10'>
+                <div class="topnav1" >
+                    
+                    <a href="/studentHome/FinalResearchTopic" style={{float:"right", marginTop:'0.5cm'}}>Topic Submitted Groups</a>
+                    <a href="/studentHome/AddResearchTopic" style={{float:"right", marginTop:'0.5cm'}}>Submit Research Topics</a>
+                    
+             
+                </div>
+            </div>
 
             <br></br>
-            <br></br>
-            <h2 id="headertext">
+            <h2 id="headertext1">
                 Add Research Topic
             </h2>
 
             {/* add journey form */}
-            <form onSubmit={sendData}  id="form_journey">
+            <form onSubmit={sendData}  id="form_journey" style={{marginLeft:'4cm'}}>
 
 
                 <div className="row">
@@ -90,31 +99,111 @@ export default function AddResearchTopic() {
                     />
                 </div>
 
-                <div className="row">
+                {/* <div className="row">
                     <label htmlFor="from">Research Area</label>
                     <input type="text" className="form-control" id="research_area"  placeholder="" required
                     onChange = {(e) => {
                         setresearch_area(e.target.value);
                     }}
                     />
-                </div>
+                </div> */}
 
                 <div className="row">
+                    <label htmlFor="route">Research Area </label>
+                   
+
+                        <select className="form-control" id="research_area" style={{height:"1cm"}} 
+                        required 
+                        onChange = {(e) => {
+                            setresearch_area(e.target.value);
+                                }}>
+                                <option>Select Research Area</option>
+                                <option value="Natural Language Processing (NLP)">Natural Language Processing (NLP)</option>
+                                <option value="Computational Linguistics (CL)">Computational Linguistics (CL)</option>
+                                <option value="Data Science (DS)">Data Science (DS)</option>
+                                <option value="Business Intelligence and Analytics (BIA">Business Intelligence and Analytics (BIA</option>
+                                <option value="Knowledge Management (KM)">Knowledge Management (KM)</option>
+                                <option value="Big Data (BD)">Big Data (BD)</option>
+                                <option value="ICT for Development (ICTD)">ICT for Development (ICTD)</option>
+                                <option value="E-learning and Education (ELE)">E-learning and Education (ELE)</option>
+                                <option value="Human Computer Interaction (HCI)">Human Computer Interaction (HCI)</option>
+                                <option value="Software-Defined Networks (SDN)">Software-Defined Networks (SDN)</option>
+                                <option value="Software Engineering (SE)."> Software Engineering (SE).</option>
+                                <option value="Cloud Computing (CC)">Cloud Computing (CC)</option>
+                                <option value="Algorithms Design and Development (ADD)">Algorithms Design and Development (ADD)</option>
+
+                            </select>
+                    </div>
+
+
+                {/* <div className="row">
                     <label htmlFor="to">Supervisor Name</label>
                     <input type="text" className="form-control" id="supervisor_name" placeholder="" required
                      onChange = {(e) => {
                         setsupervisor_name(e.target.value);
                     }}
                     />
-                </div>
+                </div> */}
 
                 <div className="row">
+                    <label htmlFor="route">Supervisor Name </label>
+                    
+
+                        <select className="form-control" id="supervisor_name" style={{height:"1cm"}} required 
+                        onChange = {(e) => {
+                            setsupervisor_name(e.target.value);
+                                }}>
+                                <option>Select Supervisor</option>
+                                <option value="Prof.Koliya Pulasinghe">Prof.Koliya Pulasinghe</option>
+                                <option value="Prof. Chandimal S. Jayawardena">Prof. Chandimal S. Jayawardena</option>
+                                <option value="Prof. Mahesha Kapurubandara">Prof. Mahesha Kapurubandara</option>
+                                <option value="Prof. Samantha Thelijjagoda">Prof. Samantha Thelijjagoda</option>
+                                <option value="Dr. Pradeepa Samarasinghe">Dr. Pradeepa Samarasinghe</option>
+                                <option value="Dr. Janaka Wijekoon">Dr. Janaka Wijekoon</option>
+                                <option value="Dr. Dharshana Kasthururathne">Dr. Dharshana Kasthururathne</option>
+                                <option value="Dr. Anuradha Karunasena">Dr. Anuradha Karunasena</option>
+                                <option value="Dr. Windhaya Rankothge">Dr. Windhaya Rankothge</option>
+                                <option value="Dr. Malitha Wijesundara">Dr. Malitha Wijesundara</option>
+                                <option value="Dr. Nuwan Kodagoda"> Dr. Nuwan Kodagoda</option>
+                                <option value="Dr. Jayantha Amararachchi">Dr. Jayantha Amararachchi</option>
+                                <option value="Dr. Jeewanee Bamunusinghe">Dr. Jeewanee Bamunusinghe</option>
+
+                            </select>
+                </div>
+
+                {/* <div className="row">
                     <label htmlFor="to">Co-Supervisor Name</label>
                     <input type="text" className="form-control" id="co_supervisor_name" placeholder="" required
                      onChange = {(e) => {
                         setco_supervisor_name(e.target.value);
                     }}
                     />
+                </div> */}
+
+                <div className="row">
+                    <label htmlFor="route">Co-Supervisor Name </label>
+                    
+
+                        <select className="form-control" id="co_supervisor_name" style={{height:"1cm"}} required 
+                        onChange = {(e) => {
+                            setco_supervisor_name(e.target.value);
+                                }}>
+                                <option>Select Co-Supervisor</option>
+                                <option value="Prof.Koliya Pulasinghe">Prof.Koliya Pulasinghe</option>
+                                <option value="Prof. Chandimal S. Jayawardena">Prof. Chandimal S. Jayawardena</option>
+                                <option value="Prof. Mahesha Kapurubandara">Prof. Mahesha Kapurubandara</option>
+                                <option value="Prof. Samantha Thelijjagoda">Prof. Samantha Thelijjagoda</option>
+                                <option value="Dr. Pradeepa Samarasinghe">Dr. Pradeepa Samarasinghe</option>
+                                <option value="Dr. Janaka Wijekoon">Dr. Janaka Wijekoon</option>
+                                <option value="Dr. Dharshana Kasthururathne">Dr. Dharshana Kasthururathne</option>
+                                <option value="Dr. Anuradha Karunasena">Dr. Anuradha Karunasena</option>
+                                <option value="Dr. Windhaya Rankothge">Dr. Windhaya Rankothge</option>
+                                <option value="Dr. Malitha Wijesundara">Dr. Malitha Wijesundara</option>
+                                <option value="Dr. Nuwan Kodagoda"> Dr. Nuwan Kodagoda</option>
+                                <option value="Dr. Jayantha Amararachchi">Dr. Jayantha Amararachchi</option>
+                                <option value="Dr. Jeewanee Bamunusinghe">Dr. Jeewanee Bamunusinghe</option>
+
+                            </select>
                 </div>
 
                 <div className="row">
@@ -182,11 +271,14 @@ export default function AddResearchTopic() {
 
 
                   
-                
+                <button type="reset"  id = "#">Reset</button>
 
                 <button type="submit"  id = "#">Add</button>
             </form>
 
+            <div >
+                <img src={IMAGE8} id="imageL8"/>
+            </div>
             
             
         </div>

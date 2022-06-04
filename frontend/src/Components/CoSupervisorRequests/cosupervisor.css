@@ -9,8 +9,44 @@
     background-color: #051931;
 }
 
+#headertext1{
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin-left: 14cm;
+    font-size: 40px;
+}
 
+#imageL7{
+    width: 15cm;
+    height: 14cm;
+    margin-left: 23cm;
+    margin-top: -18cm;
+}
 
+#imageL8{
+    width: 17cm;
+    height: 16cm;
+    margin-left: 23cm;
+    margin-top: -30cm;
+    position: fixed;
+}
+
+#imageL9{
+  width: 17cm;
+  height: 16cm;
+  margin-left: 23cm;
+  margin-top: -20cm;
+  position: fixed;
+}
+
+#imageL10{
+  width: 15cm;
+  height: 14cm;
+  margin-left: 23cm;
+  margin-top: -39cm;
+  position: fixed;
+}
 
 #headertext{
     color: rgb(0, 0, 0);
@@ -205,3 +241,64 @@
     height: 12cm;
     border-radius: 8px;
 }
+
+#btn6{
+    width: 100px;
+    height: 33px;
+    background-color: blue;
+    border-color: blue;
+    border-radius: 50px 0px 0px 50px;
+    margin-left: -95px;
+    margin-top: 10px;
+}
+.blackiconcolor{
+    color: white;
+   
+}
+#btn7{
+  width: 100px;
+  height: 33px;
+  background-color: rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+  border-radius: 0px 50px 50px 0px;
+  color: white;
+  margin-left: 100px;
+  margin-top: -55px;
+}
+
+#btn6:hover {
+  background-color: rgb(0, 0, 105);
+  border-color: rgb(0, 0, 105);
+}
+
+#btn7:hover {
+  background-color: rgb(145, 0, 0);
+  border-color: rgb(145, 0, 0);
+}
+
+#btn8{
+    width: 100px;
+    height: 33px;
+    background-color: rgb(255, 166, 0);
+    
+    border-radius: 50px 50px 50px 50px;
+    color: white;
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+
+  #btn10{
+    width: 100px;
+    height: 33px;
+    background-color: rgb(255, 8, 8);
+    
+    border-radius: 50px 50px 50px 50px;
+    color: white;
+    margin-left: 10px;
+    margin-top: -1px;
+  }
+  
+  #btn8:hover {
+    background-color: rgb(219, 160, 32);
+    
+  }

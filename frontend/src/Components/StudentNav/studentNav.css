@@ -7,6 +7,15 @@
    
 }
 
+#st-sec10{
+
+ border: 1px solid #dddddd;
+  z-index: 1;
+  width: 100%;
+  
+ 
+}
+
 #Logo1 {
   width: 8cm;
   height: 2cm;
@@ -33,3 +42,6 @@
     text-decoration: none;
     
   }
+
+  /* ---------------------- */
+  

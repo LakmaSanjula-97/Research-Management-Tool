@@ -84,12 +84,6 @@ export default class EditCoSupRequest extends Component {
 
    
 
-
-
-    
-    
-
-
     onSubmit(e){
         e.preventDefault();
         const obj = {
@@ -121,13 +115,14 @@ export default class EditCoSupRequest extends Component {
 
             <div className ="form_journey">
 
-                <br></br>
-                <br></br>
-                <h2 id="headertext">
-                    Give Approval For Research Topics
-                </h2>
-           
-                <form onSubmit={this.onSubmit}  id="form_journey">
+            <br></br>
+            <br></br>
+            <h2 id="headertext-Sup" style={{marginLeft:'15cm'}}>
+                Give Approval for Research Topic
+            </h2>
+            <hr id="hr"></hr>
+            <br></br>
+                <form onSubmit={this.onSubmit}  id="form_journey" style={{marginLeft:'14cm'}}>
 
 
                     
@@ -195,9 +190,9 @@ export default class EditCoSupRequest extends Component {
                             </select>
                         </div>
 
+                    <br></br>
                     
-                    
-                    <button type="submit">Update</button>
+                    <button type="submit" style={{marginLeft:'5cm'}}>Update</button>
                     <br/><br/>
 
                 </form>

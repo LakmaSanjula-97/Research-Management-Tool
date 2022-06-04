@@ -53,7 +53,6 @@ import StudentViewPanelMember from './Components/StudentPanelView/StudentViewPan
 
 
 import AddMarkingScheme from './Components/Admin/MarkingScheme/AddMarkingScheme';
-import ViewMarkingScheme from './Components/Admin/MarkingScheme/ViewMarkingScheme';
 
 
 axios.defaults.withCredentials = true;
@@ -127,7 +126,6 @@ function App() {
           {/* ------------------------------------------- */}
 
           <Route path="/dashboard/AddMarkingScheme" exact component={AddMarkingScheme}/>
-          <Route path="/dashboard/ViewMarkingScheme" exact component={ViewMarkingScheme}/>
 
 
           

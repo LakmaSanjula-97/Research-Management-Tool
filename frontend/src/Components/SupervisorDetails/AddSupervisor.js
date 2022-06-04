@@ -70,7 +70,7 @@ export default function AddSupervisor() {
 
                 <div className="row">
                     <label htmlFor="passenger_id">Email </label>
-                    <input type="text" className="form-control" id="supervisor_email" placeholder="" required
+                    <input type="text" data-testid="supervisor_email" className="form-control" id="supervisor_email" placeholder="" required
                      onChange = {(e) => {
                         setsupervisor_email(e.target.value);
                     }}  
@@ -79,7 +79,7 @@ export default function AddSupervisor() {
 
                 <div className="row">
                     <label htmlFor="from">Department  </label>
-                    <input type="text" className="form-control" id="supervisor_faculty"  placeholder="" required
+                    <input type="text" data-testid="department" className="form-control" id="supervisor_faculty"  placeholder="" required
                     onChange = {(e) => {
                         setsupervisor_faculty(e.target.value);
                     }}
